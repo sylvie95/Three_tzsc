@@ -84,12 +84,19 @@ create table comments(
 	comdate date,
 );
 
+--收藏夹
+create table collect(
+	collid Integer primary key,							--收藏id	
+	collusername varchar2(20) not null ,				--收藏用户
+	collcid	Integer not null ,							--收藏的商品id
+	collstate Integer default 1							--是否收藏 ( 1.未收藏	2.已收藏 )
+);
+
 --订单表
 create table dingdan(
 	did Integer primary key,							--订单编号
 	dno varchar2(20) not null unique,					--订单流水编号
-	dcid Integer not null;
-			--商品id
+	dcid Integer not null;								--商品id
 	dcname varchar2(30) not null,						--商品名称/标题(外键引用发布商品信息表标题)
 	daddress varchar2(200)	not null,					--收货地址
 	dusername varchar2(20) not null,					--支付用户		
