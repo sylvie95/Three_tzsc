@@ -87,7 +87,6 @@ insert into t_mintype values(21,6,'家纺家饰');
 insert into t_mintype values(22,6,'日用日化');
 insert into t_mintype values(23,6,'家装建材');
 
-select * from t_mintype;
 
 --第三级小分类表
 create table t_smin(
@@ -97,53 +96,52 @@ create table t_smin(
 );
 
 create sequence seq_t_smin increment by 1 start with 1;
-insert into t_smin values(seq_t_smin.nextval,1,'手机壳');
-insert into t_smin values(seq_t_smin.nextval,1,'数据线');
-insert into t_smin values(seq_t_smin.nextval,2,'笔记本');
-insert into t_smin values(seq_t_smin.nextval,2,'PC电脑');
-insert into t_smin values(seq_t_smin.nextval,3,'PS4');
-insert into t_smin values(seq_t_smin.nextval,3,'MP4');
-insert into t_smin values(seq_t_smin.nextval,4,'单反');
-insert into t_smin values(seq_t_smin.nextval,4,'镜头');
-insert into t_smin values(seq_t_smin.nextval,5,'Java');
-insert into t_smin values(seq_t_smin.nextval,5,'Oracle');
-insert into t_smin values(seq_t_smin.nextval,6,'计算机安全');
-insert into t_smin values(seq_t_smin.nextval,6,'数据挖掘');
-insert into t_smin values(seq_t_smin.nextval,7,'笔记');
-insert into t_smin values(seq_t_smin.nextval,8,'电视');
-insert into t_smin values(seq_t_smin.nextval,8,'冰箱');
-insert into t_smin values(seq_t_smin.nextval,9,'吹风机');
-insert into t_smin values(seq_t_smin.nextval,9,'风扇');
-insert into t_smin values(seq_t_smin.nextval,10,'豆浆机');
-insert into t_smin values(seq_t_smin.nextval,10,'电饭煲');
-insert into t_smin values(seq_t_smin.nextval,11,'耳机');
-insert into t_smin values(seq_t_smin.nextval,11,'音响');
-insert into t_smin values(seq_t_smin.nextval,12,'连衣裙');
-insert into t_smin values(seq_t_smin.nextval,12,'T恤');
-insert into t_smin values(seq_t_smin.nextval,13,'运动鞋');
-insert into t_smin values(seq_t_smin.nextval,13,'单鞋');
-insert into t_smin values(seq_t_smin.nextval,14,'女包');
-insert into t_smin values(seq_t_smin.nextval,14,'旅行箱');
-insert into t_smin values(seq_t_smin.nextval,15,'帽子');
-insert into t_smin values(seq_t_smin.nextval,15,'围巾');
-insert into t_smin values(seq_t_smin.nextval,16,'翡翠');
-insert into t_smin values(seq_t_smin.nextval,16,'黄金');
-insert into t_smin values(seq_t_smin.nextval,17,'电子表');
-insert into t_smin values(seq_t_smin.nextval,17,'石英表');
-insert into t_smin values(seq_t_smin.nextval,18,'眼睛');
-insert into t_smin values(seq_t_smin.nextval,18,'手链');
-insert into t_smin values(seq_t_smin.nextval,19,'古玩');
-insert into t_smin values(seq_t_smin.nextval,19,'邮票');
-insert into t_smin values(seq_t_smin.nextval,20,'茶几');
-insert into t_smin values(seq_t_smin.nextval,20,'沙发');
-insert into t_smin values(seq_t_smin.nextval,21,'地毯');
-insert into t_smin values(seq_t_smin.nextval,21,'窗帘');
-insert into t_smin values(seq_t_smin.nextval,22,'伞');
-insert into t_smin values(seq_t_smin.nextval,22,'雨衣');
-insert into t_smin values(seq_t_smin.nextval,23,'台灯');
-insert into t_smin values(seq_t_smin.nextval,23,'壁灯');
+insert into t_mintype values(seq_t_smin.nextval,1,'手机壳');
+insert into t_mintype values(seq_t_smin.nextval,1,'数据线');
+insert into t_mintype values(seq_t_smin.nextval,2,'笔记本');
+insert into t_mintype values(seq_t_smin.nextval,2,'PC电脑');
+insert into t_mintype values(seq_t_smin.nextval,3,'PS4');
+insert into t_mintype values(seq_t_smin.nextval,3,'MP4');
+insert into t_mintype values(seq_t_smin.nextval,4,'单反');
+insert into t_mintype values(seq_t_smin.nextval,4,'镜头');
+insert into t_mintype values(seq_t_smin.nextval,5,'Java');
+insert into t_mintype values(seq_t_smin.nextval,5,'Oracle');
+insert into t_mintype values(seq_t_smin.nextval,6,'计算机安全');
+insert into t_mintype values(seq_t_smin.nextval,6,'数据挖掘');
+insert into t_mintype values(seq_t_smin.nextval,7,'笔记');
+insert into t_mintype values(seq_t_smin.nextval,8,'电视');
+insert into t_mintype values(seq_t_smin.nextval,8,'冰箱');
+insert into t_mintype values(seq_t_smin.nextval,9,'吹风机');
+insert into t_mintype values(seq_t_smin.nextval,9,'风扇');
+insert into t_mintype values(seq_t_smin.nextval,10,'豆浆机');
+insert into t_mintype values(seq_t_smin.nextval,10,'电饭煲');
+insert into t_mintype values(seq_t_smin.nextval,11,'耳机');
+insert into t_mintype values(seq_t_smin.nextval,11,'音响');
+insert into t_mintype values(seq_t_smin.nextval,12,'连衣裙');
+insert into t_mintype values(seq_t_smin.nextval,12,'T恤');
+insert into t_mintype values(seq_t_smin.nextval,13,'运动鞋');
+insert into t_mintype values(seq_t_smin.nextval,13,'单鞋');
+insert into t_mintype values(seq_t_smin.nextval,14,'女包');
+insert into t_mintype values(seq_t_smin.nextval,14,'旅行箱');
+insert into t_mintype values(seq_t_smin.nextval,15,'帽子');
+insert into t_mintype values(seq_t_smin.nextval,15,'围巾');
+insert into t_mintype values(seq_t_smin.nextval,16,'翡翠');
+insert into t_mintype values(seq_t_smin.nextval,16,'黄金');
+insert into t_mintype values(seq_t_smin.nextval,17,'电子表');
+insert into t_mintype values(seq_t_smin.nextval,17,'石英表');
+insert into t_mintype values(seq_t_smin.nextval,18,'眼睛');
+insert into t_mintype values(seq_t_smin.nextval,18,'手链');
+insert into t_mintype values(seq_t_smin.nextval,19,'古玩');
+insert into t_mintype values(seq_t_smin.nextval,19,'邮票');
+insert into t_mintype values(seq_t_smin.nextval,20,'茶几');
+insert into t_mintype values(seq_t_smin.nextval,20,'沙发');
+insert into t_mintype values(seq_t_smin.nextval,21,'地毯');
+insert into t_mintype values(seq_t_smin.nextval,21,'窗帘');
+insert into t_mintype values(seq_t_smin.nextval,22,'伞');
+insert into t_mintype values(seq_t_smin.nextval,22,'雨衣');
+insert into t_mintype values(seq_t_smin.nextval,23,'台灯');
+insert into t_mintype values(seq_t_smin.nextval,23,'壁灯');
 
-select * from t_smin;
 
 
 --商品发布表(发布商品时所需告知, 显示的信息表)
