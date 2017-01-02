@@ -1,4 +1,28 @@
+--删除
 drop table t_users;
+drop table t_admin;
+drop table t_type;
+drop table t_mintype;
+drop table t_smin;
+drop table t_commodity;
+drop table t_num;
+drop table t_needcom;
+drop table comments;
+drop table collects;
+drop table dingdan;
+--查询
+select * from t_users;
+select * from t_admin;
+select * from t_type;
+select * from t_mintype;
+select * from t_smin;
+select * from t_commodity;
+select * from t_num;
+select * from t_needcom;
+select * from comments;
+select * from collects;
+select * from dingdan;
+
 
 --用户信息表(买家卖家注册时所需填写的信息, 用于用户核实)
 create table t_users(
@@ -55,7 +79,6 @@ update t_type set tname = '家具日用' where tid = 6;
 
 
 --商品小类型表(细化总类型, 电子产品里的:手机, 电脑....)
---drop table t_mintype;
 create table t_mintype(
   mid Integer primary key,                --小类型id
 	tid references t_type(tid),							--类型编号( 外键引用商品总类型 )
@@ -87,6 +110,7 @@ insert into t_mintype values(21,6,'家纺家饰');
 insert into t_mintype values(22,6,'日用日化');
 insert into t_mintype values(23,6,'家装建材');
 
+select * from t_mintype;
 
 --第三级小分类表
 create table t_smin(
@@ -96,61 +120,63 @@ create table t_smin(
 );
 
 create sequence seq_t_smin increment by 1 start with 1;
-insert into t_mintype values(seq_t_smin.nextval,1,'手机壳');
-insert into t_mintype values(seq_t_smin.nextval,1,'数据线');
-insert into t_mintype values(seq_t_smin.nextval,2,'笔记本');
-insert into t_mintype values(seq_t_smin.nextval,2,'PC电脑');
-insert into t_mintype values(seq_t_smin.nextval,3,'PS4');
-insert into t_mintype values(seq_t_smin.nextval,3,'MP4');
-insert into t_mintype values(seq_t_smin.nextval,4,'单反');
-insert into t_mintype values(seq_t_smin.nextval,4,'镜头');
-insert into t_mintype values(seq_t_smin.nextval,5,'Java');
-insert into t_mintype values(seq_t_smin.nextval,5,'Oracle');
-insert into t_mintype values(seq_t_smin.nextval,6,'计算机安全');
-insert into t_mintype values(seq_t_smin.nextval,6,'数据挖掘');
-insert into t_mintype values(seq_t_smin.nextval,7,'笔记');
-insert into t_mintype values(seq_t_smin.nextval,8,'电视');
-insert into t_mintype values(seq_t_smin.nextval,8,'冰箱');
-insert into t_mintype values(seq_t_smin.nextval,9,'吹风机');
-insert into t_mintype values(seq_t_smin.nextval,9,'风扇');
-insert into t_mintype values(seq_t_smin.nextval,10,'豆浆机');
-insert into t_mintype values(seq_t_smin.nextval,10,'电饭煲');
-insert into t_mintype values(seq_t_smin.nextval,11,'耳机');
-insert into t_mintype values(seq_t_smin.nextval,11,'音响');
-insert into t_mintype values(seq_t_smin.nextval,12,'连衣裙');
-insert into t_mintype values(seq_t_smin.nextval,12,'T恤');
-insert into t_mintype values(seq_t_smin.nextval,13,'运动鞋');
-insert into t_mintype values(seq_t_smin.nextval,13,'单鞋');
-insert into t_mintype values(seq_t_smin.nextval,14,'女包');
-insert into t_mintype values(seq_t_smin.nextval,14,'旅行箱');
-insert into t_mintype values(seq_t_smin.nextval,15,'帽子');
-insert into t_mintype values(seq_t_smin.nextval,15,'围巾');
-insert into t_mintype values(seq_t_smin.nextval,16,'翡翠');
-insert into t_mintype values(seq_t_smin.nextval,16,'黄金');
-insert into t_mintype values(seq_t_smin.nextval,17,'电子表');
-insert into t_mintype values(seq_t_smin.nextval,17,'石英表');
-insert into t_mintype values(seq_t_smin.nextval,18,'眼睛');
-insert into t_mintype values(seq_t_smin.nextval,18,'手链');
-insert into t_mintype values(seq_t_smin.nextval,19,'古玩');
-insert into t_mintype values(seq_t_smin.nextval,19,'邮票');
-insert into t_mintype values(seq_t_smin.nextval,20,'茶几');
-insert into t_mintype values(seq_t_smin.nextval,20,'沙发');
-insert into t_mintype values(seq_t_smin.nextval,21,'地毯');
-insert into t_mintype values(seq_t_smin.nextval,21,'窗帘');
-insert into t_mintype values(seq_t_smin.nextval,22,'伞');
-insert into t_mintype values(seq_t_smin.nextval,22,'雨衣');
-insert into t_mintype values(seq_t_smin.nextval,23,'台灯');
-insert into t_mintype values(seq_t_smin.nextval,23,'壁灯');
+insert into t_smin values(seq_t_smin.nextval,1,'手机壳');
+insert into t_smin values(seq_t_smin.nextval,1,'数据线');
+insert into t_smin values(seq_t_smin.nextval,2,'笔记本');
+insert into t_smin values(seq_t_smin.nextval,2,'PC电脑');
+insert into t_smin values(seq_t_smin.nextval,3,'PS4');
+insert into t_smin values(seq_t_smin.nextval,3,'MP4');
+insert into t_smin values(seq_t_smin.nextval,4,'单反');
+insert into t_smin values(seq_t_smin.nextval,4,'镜头');
+insert into t_smin values(seq_t_smin.nextval,5,'Java');
+insert into t_smin values(seq_t_smin.nextval,5,'Oracle');
+insert into t_smin values(seq_t_smin.nextval,6,'计算机安全');
+insert into t_smin values(seq_t_smin.nextval,6,'数据挖掘');
+insert into t_smin values(seq_t_smin.nextval,7,'笔记');
+insert into t_smin values(seq_t_smin.nextval,8,'电视');
+insert into t_smin values(seq_t_smin.nextval,8,'冰箱');
+insert into t_smin values(seq_t_smin.nextval,9,'吹风机');
+insert into t_smin values(seq_t_smin.nextval,9,'风扇');
+insert into t_smin values(seq_t_smin.nextval,10,'豆浆机');
+insert into t_smin values(seq_t_smin.nextval,10,'电饭煲');
+insert into t_smin values(seq_t_smin.nextval,11,'耳机');
+insert into t_smin values(seq_t_smin.nextval,11,'音响');
+insert into t_smin values(seq_t_smin.nextval,12,'连衣裙');
+insert into t_smin values(seq_t_smin.nextval,12,'T恤');
+insert into t_smin values(seq_t_smin.nextval,13,'运动鞋');
+insert into t_smin values(seq_t_smin.nextval,13,'单鞋');
+insert into t_smin values(seq_t_smin.nextval,14,'女包');
+insert into t_smin values(seq_t_smin.nextval,14,'旅行箱');
+insert into t_smin values(seq_t_smin.nextval,15,'帽子');
+insert into t_smin values(seq_t_smin.nextval,15,'围巾');
+insert into t_smin values(seq_t_smin.nextval,16,'翡翠');
+insert into t_smin values(seq_t_smin.nextval,16,'黄金');
+insert into t_smin values(seq_t_smin.nextval,17,'电子表');
+insert into t_smin values(seq_t_smin.nextval,17,'石英表');
+insert into t_smin values(seq_t_smin.nextval,18,'眼睛');
+insert into t_smin values(seq_t_smin.nextval,18,'手链');
+insert into t_smin values(seq_t_smin.nextval,19,'古玩');
+insert into t_smin values(seq_t_smin.nextval,19,'邮票');
+insert into t_smin values(seq_t_smin.nextval,20,'茶几');
+insert into t_smin values(seq_t_smin.nextval,20,'沙发');
+insert into t_smin values(seq_t_smin.nextval,21,'地毯');
+insert into t_smin values(seq_t_smin.nextval,21,'窗帘');
+insert into t_smin values(seq_t_smin.nextval,22,'伞');
+insert into t_smin values(seq_t_smin.nextval,22,'雨衣');
+insert into t_smin values(seq_t_smin.nextval,23,'台灯');
+insert into t_smin values(seq_t_smin.nextval,23,'壁灯');
 
+select * from t_smin;
 
 
 --商品发布表(发布商品时所需告知, 显示的信息表)
+--drop table t_commodity;
 create table t_commodity(
 	cid Integer primary key,							--商品编号
 	cname varchar2(30) not null,						--商品名称/标题		(不能为空)
 	ctname varchar2(10) not null,						--商品类型			(不能为空)
 	cdescribe varchar2(400) default '卖家有点懒, ',		--商品描述	
-	cpic varchar2(100) not null,						--商品图片信息(  可多张, 以 ; 分隔  )
+	cpic varchar2(100),						--商品图片信息(  可多张, 以 ; 分隔  )
 	cprice float not null,								--商品出售价格		(不能为空)
 	cusername varchar2(20) not null,					--商品卖家( 发布商品的用户 )
 	caddress varchar2(40),								--用户当前所在地
@@ -159,10 +185,35 @@ create table t_commodity(
 	cqq	varchar2(20),									--商家qq
 	cdate date ,										--商品发布时间
 	cstate_com Integer default 1,						--商品状态(1.未交易  2.已交易)
-	cstate_dingdan	Integer delfault 2,							--订单审核状态(1.待审核 2.通过 3.未通过)
-	cmessage varchar2(100) ,							--审核信息(比如未通过: 理由)
+	cstate_dingdan Integer default 2,							--订单审核状态(1.待审核 2.通过 3.未通过)
+	cmessage varchar2(100) default '无',							--审核信息(比如未通过: 理由)
 	cadminname varchar2(20)								--订单审核的管理员
 );
+
+create sequence seq_t_commodity increment by 1 start with 1;
+
+insert into t_commodity values(seq_t_commodity.nextval,'闲置手机','闲置数码','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'台式电脑','闲置数码','无','images/pic.jsg',2350,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'PS4','闲置数码','无','images/pic.jsg',1600,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'吹风机','影音家电','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'电饭煲','影音家电','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'豆浆机','影音家电','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'新T恤','鞋服配饰','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'板鞋','鞋服配饰','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'新织围巾','鞋服配饰','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'石英手表','珠宝收藏','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'长城邮票','珠宝收藏','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'古玩','珠宝收藏','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+
+--insert into PROFILE
+--select seq_t_commodiy.nextval, 
+--dbms_random.string('l',dbms_random.value(5, 20)),
+--to_char(add_months(sysdate, dbms_random.value(12*18, 12*50) * -1), 'yyyy-MM-dd'),
+--decode(ceil(dbms_random.value(0, 2)), 1, '男', '女'),
+--decode(ceil(dbms_random.value(0, 6)), 1, '程序员', 2, '测试员', 3, '分析员', 4, '设计员', 5, '翻译员', '管理员'),
+--decode(ceil(dbms_random.value(0, 6)), 1, '湖南', 2, '湖北', 3, '广东', 4, '广西', 5, '北京', '上海'),
+--'180'||ceil(dbms_random.value(10000000,99999999)) from dual connect by level <= 1000;
+
 
 --商品浏览量(每被点击查看一次, 点击量加一)
 create table t_num(										
@@ -170,20 +221,26 @@ create table t_num(
 	nnum int default 0									--商品点击量( 绑定ip地址, 不可重复累加 )
 );
 
+create sequence seq_t_num increment by 1 start with 1;
+
 
 --商品求购表(用户发布自己的求购信息)
 create table t_needcom(
 	nid Integer primary key,							--求购表编号
 	nname varchar2(30) not null,						--求购商品名称/标题
-	ndescribe varchar2(400) default '买家有点懒'		--求购商品描述
+	ndescribe varchar2(400) default '买家有点懒',		--求购商品描述
 	npic varchar2(100),									--求购商品图片信息
 	nusername varchar2(20) not null,					--发布求购用户
 	naddress varchar2(40),								--用户当前所在地
 	ndate date ,										--发布求购信息时间
-	norder	Integer delfault 2,							--订单审核状态(1.待审核 2.通过 3.未通过)
-	nmessage varchar2(100) ,							--审核信息(比如未通过: 理由)
-	nadminname varchar2(20)						--订单审核的管理员
+	norder	Integer default 2,							--订单审核状态(1.待审核 2.通过 3.未通过)
+	nmessage varchar2(100) default '无',							--审核信息(比如未通过: 理由)
+	nadname varchar2(20)						--订单审核的管理员
 );
+
+create sequence seq_t_needcom increment by 1 start with 1;
+
+insert into t_needcom values(seq_t_needcom.nextval,'求购一个闲置手机','无','images/pic2.jpg','张三','湖南',sysdate,2,'无','admin');
 
 --商品评价表
 create table comments(
@@ -191,22 +248,26 @@ create table comments(
 	comcid Integer not null,							--指定哪一个商品id( 哪一个商品的留言)
 	comcontent varchar2(100),							--发表内容
 	comusername varchar2(20) not null,					--发表用户
-	comdate date,
+	comdate date
 );
 
+create sequence seq_comments increment by 1 start with 1;
+
 --收藏夹
-create table collect(
+create table collects(
 	collid Integer primary key,							--收藏id	
 	collusername varchar2(20) not null ,				--收藏用户
 	collcid	Integer not null ,							--收藏的商品id
 	collstate Integer default 1							--是否收藏 ( 1.未收藏	2.已收藏 )
 );
 
+create sequence seq_collects increment by 1 start with 1;
+
 --订单表
 create table dingdan(
 	did Integer primary key,							--订单编号
 	dno varchar2(20) not null unique,					--订单流水编号
-	dcid Integer not null;								--商品id
+	dcid Integer not null,                   						--商品id
 	dcname varchar2(30) not null,						--商品名称/标题(外键引用发布商品信息表标题)
 	daddress varchar2(200)	not null,					--收货地址
 	dusername varchar2(20) not null,					--支付用户		
@@ -214,3 +275,5 @@ create table dingdan(
 	dmoney float check(dmoney > 0),						--订单交易额
 	dstate Integer default 1							--订单状态(1.未交易成功  2.交易成功) 
 );
+
+create sequence seq_dingdan increment by 1 start with 1;
