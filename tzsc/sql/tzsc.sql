@@ -277,6 +277,3 @@ create table dingdan(
 );
 
 create sequence seq_dingdan increment by 1 start with 1;
-
-
-
