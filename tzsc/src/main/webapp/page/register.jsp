@@ -63,12 +63,12 @@
    </div>
 </div>
 	
-<!-- <script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
 <script src="js/register.js"></script>
 <script>
 	$(function(){
 		$("#reg_form").Reg();
 	})
-</script> -->
+</script>
 </body>
 </html>
