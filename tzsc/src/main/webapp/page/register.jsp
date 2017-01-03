@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<base href="/tzsc/">
 	<meta charset="UTF-8">
 	<title>注册 - 易淘网</title>
-	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
-
 <body class="bgf4">
 <!-- top begin-->
 <div class="top2 bb1c">
@@ -63,12 +63,12 @@
    </div>
 </div>
 	
-<script src="../js/jquery-1.12.4.js"></script>
-<script src="../js/register.js"></script>
+<!-- <script src="js/jquery-1.12.4.js"></script>
+<script src="js/register.js"></script>
 <script>
 	$(function(){
 		$("#reg_form").Reg();
 	})
-</script>
+</script> -->
 </body>
 </html>

@@ -81,12 +81,9 @@ $.fn.Reg = function(options) {
 				$obj.html(seconds + "秒后可重新发逿");
 			} else {
 				clearInterval(timer);
-<<<<<<< HEAD
 				$obj.removeClass('disab').removeAttr("disabled").html("获取短信验证砿");
-=======
 				$obj.removeClass('disab').removeAttr("disabled")
 						.html("获取短信验证砿");
->>>>>>> branch 'master' of ssh://git@github.com/sylvie95/Three_tzsc.git
 			}
 		}, 1000);
 	}
