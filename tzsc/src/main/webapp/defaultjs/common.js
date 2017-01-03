@@ -1,9 +1,3 @@
-/***********************页面提取过来********************/
- <!-- 右侧边栏  end-->  
-
-
-
-/************************************************************/
 $(document).ajaxSend(function(a, b, c) {
     if (c.type == 'POST') {
         b.setRequestHeader('X-CSRF-Token', $('meta[name=csrf-token]').attr('content'));
