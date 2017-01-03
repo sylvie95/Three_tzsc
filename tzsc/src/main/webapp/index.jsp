@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- 重要样式, 勿动 -->
 <link href="defaultcss/common.css" rel="stylesheet">
- 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body><!-- top -->
     <div class="wrap">
@@ -189,7 +190,18 @@
 		<div class="bd">
 			<div class="tempWrap" style="overflow:hidden; position:relative; width:1052px">
             	<ul class="gkk_ul" style="width: 3945px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1315px;">
-                	<li rel="nofollow" onclick="window.open(&#39;https://ke.qq.com/course/172390&#39;,&#39;_blank&#39;)" style="float: left; width: 248px;">
+                	<li class="listNew" rel="nofollow" onclick="window.open()" style="float: left; width: 248px;">
+						<a class="gkk_imgbox" href="">
+                            <img src="images/not_pic.jpg" alt="" widht="248" height="150">
+                            <div class="tit">
+                                <p class="time">12月20日开课 <span>UI</span></p>
+                                <b></b>
+                            </div>
+						</a>
+						<!-- <p class="name">挑战年薪30万-移动UI设计师之路</p> -->
+						<p class="num">已有<span class="red">717</span>人报名 <a href="http://www.codingke.com/">立即报名</a></p>
+					</li>
+                    <li class="listNew" rel="nofollow" onclick="window.open()" style="float: left; width: 248px;">
 						<a class="gkk_imgbox" href="http://www.codingke.com/#">
                             <img src="./index_kd_files/gkk10.jpg" alt="" widht="248" height="150">
                             <div class="tit">
@@ -200,18 +212,7 @@
 						<p class="name">挑战年薪30万-移动UI设计师之路</p>
 						<p class="num">已有<span class="red">717</span>人报名 <a href="http://www.codingke.com/">立即报名</a></p>
 					</li>
-                    <li rel="nofollow" onclick="window.open()" style="float: left; width: 248px;">
-						<a class="gkk_imgbox" href="http://www.codingke.com/#">
-                            <img src="./index_kd_files/gkk10.jpg" alt="" widht="248" height="150">
-                            <div class="tit">
-                                <p class="time">12月20日开课 <span>UI</span></p>
-                                <b></b>
-                            </div>
-						</a>
-						<p class="name">挑战年薪30万-移动UI设计师之路</p>
-						<p class="num">已有<span class="red">717</span>人报名 <a href="http://www.codingke.com/">立即报名</a></p>
-					</li>
-                    <li rel="nofollow" onclick="" style="float: left; width: 248px;">
+                   	<li rel="nofollow" onclick="" style="float: left; width: 248px;">
 						<a class="gkk_imgbox" href="http://www.codingke.com/#">
                             <img src="./index_kd_files/gkk10.jpg" alt="" widht="248" height="150">
                             <div class="tit">
@@ -887,7 +888,8 @@
 	<script src="defaultjs/hm.js"></script>
 	<script src="defaultjs/jquery.js"></script>
     <script src="defaultjs/jquery.superslide.js"></script>
-    <script src="defaultjs/common.js"></script><script>
+    <script src="defaultjs/common.js"></script>
+    <script>
 		$(function(){
 			$(document).indexFn();
 		})
@@ -907,7 +909,10 @@
 
     <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256018185'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256018185' type='text/javascript'%3E%3C/script%3E"));
-    </script><span id="cnzz_stat_icon_1256018185"><a href="http://www.cnzz.com/stat/website.php?web_id=1256018185" target="_blank" title="站长统计">站长统计</a></span><script src="./index_kd_files/z_stat.php" type="text/javascript"></script><script src="./index_kd_files/core.php" charset="utf-8" type="text/javascript"></script>
+    </script>
+    <span id="cnzz_stat_icon_1256018185"><a href="http://www.cnzz.com/stat/website.php?web_id=1256018185" target="_blank" title="站长统计">站长统计</a></span>
+    <script src="defaultjs/z_stat.php" type="text/javascript"></script>
+    <script src="defaultjs/core.php" charset="utf-8" type="text/javascript"></script>
 
 </div>
 
@@ -944,6 +949,9 @@
 
         </div>
     </div>
+    
+    
+    
+    
 </body>
-
 </html>
