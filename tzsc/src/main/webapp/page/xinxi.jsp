@@ -4,8 +4,8 @@
 <head>
 <base href="/tzsc/">
 <meta charset="utf-8">
-<title>注册</title>
-<link type="text/css" rel="stylesheet" href="css/register.css">
+<title>详情页面</title>
+<link type="text/css" rel="stylesheet" href="css/xinxi.css">
 </head>
 
 <body>
@@ -25,34 +25,76 @@
                         <li style="cursor:pointer">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</li>
                     </ul>
                 </li>
-                <li>HI~请[<a href="#">登录</a>]&nbsp;&nbsp;<a href="#" style="color:#FD843D">[免费注册]</a></li>
+                <li>HI~请[<a href="login.html">登录</a>]&nbsp;&nbsp;<a href="register.html" style="color:#FD843D">[免费注册]</a></li>
             </ul>
         </div>
     
     </div>
-    
+    <!-- logo与搜索部分 -->
     <div class="header2">
-    	<div>
+    	<div class="header2_1">
         	<img/>
+            <!--<p><input placeholder="请输入关键词..."/><a href="#">搜索</a></p>-->
         </div>
     </div>
 </header>
 
 <article>
-    <div class="article1_1">
-    	<div class="article2_1">
-        	<ul>
-                <li><span>*</span>&nbsp;用&nbsp;户&nbsp;名：<input placeholder="请输入4~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>登录密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>确认密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>&nbsp;&nbsp;手&nbsp;&nbsp;机&nbsp;&nbsp;：<input placeholder="请输入11位手机号码" required="required"/></li>
-                <li><span>*</span>&nbsp;验&nbsp;证&nbsp;码：<input style="width:80px;" placeholder="请输入验证码" required="required"/><input style="margin-left:10px;width:70px;" type="button" value="获取验证码"/></li>
-                <li style="position:relative;"><input style="width:0px;margin:0px 10px 0px 25px;" type="checkbox"/><span style="position:absolute;color:#999999;font-size:12px;margin-top:2px;">我已阅读并同意该网站协议</span></li>
-                <li style="position:relative;"><input class="register" type="button" value="立即注册"/><span>已有账号？<a href="#">登录</a></span></li>
-            </ul>
-            <img style="margin:90px 70px 0px 0px;float:right;" src="images/register1.png"/>
-        </div>
+	<div class="article1_1">
+    	<ul class="ul1_1">
+        	<li><span></span></li>
+            <li><a href="#">首页</a></li>
+            <li>账号资料</li>
+            <li></li>
+        </ul>
     </div>
+    
+    <div class="article1_2">
+    	<!-- 左侧部分： 头像以及功能选项 -->
+    	<div class="article1_2_1">
+        	<!-- 头像部分 -->
+            <div class="userPic">
+            	<img src="images/footer1.png"/>
+                <span><a href="#">更改头像</a><!-- <input id="chaPic" type="file" value="更换头像"/> --></span>
+            </div>
+            <!--  功能选项部分 -->
+            <div class="userMenu">
+            	<ul class="ul2_1">
+                	<li>账号设置</li>
+                    <li class="huise"><a href="#">基本资料</a></li>
+                    <li><a href="#">修改密码</a></li>
+                </ul>
+            </div>
+      	</div>
+        <!-- 右侧部分： 详细信息 -->
+        <div class="article1_2_2">
+        	<span>基本资料</span>
+        	<form style="display:none">
+            	<ul>
+                	<li>用&nbsp;户&nbsp;&nbsp;名：<input/></li>
+                   	<li>手机号码：<input/></li>
+                    <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input/></li>
+                    <li>Q&nbsp;Q号码：<input/></li>
+                    <li>电子邮箱：<input/></li>
+                    <li>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：<input/></li>
+                    <li>个人简介：<textarea></textarea></li>
+                    <li><input type="button" value="保存"/></li>
+                </ul>
+            </form>
+            <form>
+            	<ul>
+                	<li>原&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
+                   	<li>新&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
+                    <li>确认密码：<input type="password"/></li>
+                    <li><input type="button" value="保存"/></li>
+                </ul>
+            </form>
+      	</div>
+    </div>
+    
+    
+
+
 </article>
 
 <footer>
@@ -107,6 +149,6 @@
 </footer>
 
 	
-	<script type="text/javascript" src="js/register.js"></script>
+	<script type="text/javascript" src="js/xinxi.js"></script>
 </body>
 </html>

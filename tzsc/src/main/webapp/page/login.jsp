@@ -4,8 +4,8 @@
 <head>
 <base href="/tzsc/">
 <meta charset="utf-8">
-<title>注册</title>
-<link type="text/css" rel="stylesheet" href="css/register.css">
+<title>登录</title>
+<link type="text/css" rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -39,18 +39,22 @@
 </header>
 
 <article>
-    <div class="article1_1">
+	<div class="article1_1">
     	<div class="article2_1">
         	<ul>
-                <li><span>*</span>&nbsp;用&nbsp;户&nbsp;名：<input placeholder="请输入4~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>登录密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>确认密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>&nbsp;&nbsp;手&nbsp;&nbsp;机&nbsp;&nbsp;：<input placeholder="请输入11位手机号码" required="required"/></li>
-                <li><span>*</span>&nbsp;验&nbsp;证&nbsp;码：<input style="width:80px;" placeholder="请输入验证码" required="required"/><input style="margin-left:10px;width:70px;" type="button" value="获取验证码"/></li>
-                <li style="position:relative;"><input style="width:0px;margin:0px 10px 0px 25px;" type="checkbox"/><span style="position:absolute;color:#999999;font-size:12px;margin-top:2px;">我已阅读并同意该网站协议</span></li>
-                <li style="position:relative;"><input class="register" type="button" value="立即注册"/><span>已有账号？<a href="#">登录</a></span></li>
+           		<li><img src="images/login1.png"></li>
+                <li>
+                	<ul class="article3_ul">
+                    	<li><span>用户登录</span></li>
+                        <li><span>用户名：<input placeholder="用户名/手机号" required="required"/></span></li>
+                        <li><span>密&nbsp;码：<input placeholder="密码长度应为6~20位" required="required"/></span></li>
+                        <li><span>验证码：<input placeholder="请写验证码" required="required"/><img src="vcode.jpg" title="看不清，换一张"/></span></li>
+                        <li><p><input style="margin-left:20px;" type="checkbox"/><span>记住密码</span></p><p><input style="margin-left:-20px;" type="checkbox"/><span>自动登录</span></p></li>
+                        <li><input type="submit" value="立即登录"/></li>
+                        <li><span><a href="#">找回密码</a><a href="#">注册新账号</a></span></li>
+                    </ul>
+                </li>
             </ul>
-            <img style="margin:90px 70px 0px 0px;float:right;" src="images/register1.png"/>
         </div>
     </div>
 </article>
@@ -107,6 +111,6 @@
 </footer>
 
 	
-	<script type="text/javascript" src="js/register.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

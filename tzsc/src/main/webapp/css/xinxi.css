@@ -1,80 +1,214 @@
 article{
-	width:55%;
-	height:480px;
+	width:70%;
+	height:600px;
 }
 
-.article2_1{
+.article1_1{
 	width:100%;
-	height:400px;
-	margin-top:75px;
-	background:#F4F4F4;
-	position:relative;
-}
-.article2_1>ul{
-	display:inline-block;
-	position:absolute;
-	width:45%;
-	height:78%;
-	border-right:1px solid #999999;
-	margin-top:50px;
+	height:80px;
 }
 
-.article2_1>ul span{
-	color:red;
+.ul1_1{
+	width:100%;
+	height:100%;
+	border-bottom:3px solid #999999;
 }
 
-.article2_1>ul>li{
+.ul1_1>li{
+	float:left;
 	font-size:14px;
 	color:#666666;
-	margin-left:50px;
-	margin-bottom:20px;
+	margin:55px 5px 10px 25px;
 }
 
-.article2_1>ul>li:first-child{
-	margin-top:0px;
-}
-
-.article2_1>ul>li:nth-child(5) input:first-child{
-	width:80px;
-}
-
-.article2_1>ul>li>input{
-	width:160px;
-	height:22px;
-	font-size:10px;
+.ul1_1>li a{
+	font-size:14px;
 	color:#666666;
 }
 
-.register{
-	width:80px !important;
-	height:25px !important;
-	background:#FF6600;
-	border:1px solid #F9AC78;
-	color:#FFF !important;
-	font-weight:bold;
-	margin:0px 20px 0px 20px;
-}
-
-.article2_1>ul>li:nth-child(7) span{
-	color:#666666 !important;
-	font-size:12px;
-}
-.article2_1>ul>li:nth-child(7) a{
-	color:#539BCB;
-}
-
-.article2_1>ul>li:nth-child(7) a:hover{
+.ul1_1>li a:hover{
 	color:#F60;
 }
 
-.register:hover{
-	background:#FC6;
+.ul1_1>li:first-child{
+	width:60px;
+	height:60px;
+	border-radius:30px;
+	border-bottom-right-radius:10px;
+	border:3px solid #999999;
+	margin:15px 0px 0px 10px;
+}
+
+.ul1_1>li:first-child>span{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	border-radius:20px;
+	background:#999999;
+	margin:10px 0px 0px 10px;
+}
+
+.ul1_1>li:nth-child(3){
+	font-size:14px;
+	color:#FFF;
+	background:#999999;
+	padding:3px 5px;
+}
+
+/******左侧部分 *****************/
+.article1_2{
+	width:100%;
+	height:60%;
+	margin-top:5px;
+	position:relative;
+}
+
+.article1_2_1{
+	width:22%;
+	height:88%;
+	position:absolute;
+	left:0px;
+}
+
+.userPic{
+	width:100%;
+	height:160px;
+	border:1px solid #CCCCCC;
+	background:#F4F4F4;
+}
+
+.userPic>img{
+	width:70px;
+	height:70px;
+	border-radius:35px;
+	margin:30px 0px 0px 70px;
+}
+
+#chaPic{
+	border:none;
+}
+
+.userPic>span{
+	display:block;
+	margin:0px 0px 0px 80px;
+}
+
+.userPic>span a{
+	font-size:12px;
+	color:#666666;
+}
+
+.userPic>span a:hover{
+	color:#F60;
+}
+
+.userMenu{
+	width:100%;
+	height:250px;
+	border:1px solid #CCCCCC;
+	background:#F4F4F4;
+	margin-top:10px;
+}
+
+.userMenu li{
+	text-align:center;
+	padding:2px 0px;
+}
+
+.userMenu li a{
+	font-size:14px;
+	color:#666666;
+}
+
+.userMenu li a:hover{
+	color:#F60;
+}
+
+.userMenu li:first-child{
+	background:#FFF;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	padding:5px 0px;
+	border-bottom:2px solid #CCCCCC;
+}
+
+/***灰色****/
+.huise{
+	background:#CCCCCC;
+}
+
+
+
+.article1_2_2{
+	width:76%;
+	height:130%;
+	position:absolute;
+	border:1px solid #CCCCCC;
+	background:#F4F4F4;
+	top:0px;
+	right:0px;
+	font-family:'微软雅黑';
+	text-align:center;
+}
+
+.article1_2_2>span{
+	display:block;
+	widows:100%;
+	padding:5px 0px 5px 10px;
+	border:1px solid #CCCCCC;
+	background:#FFF;
+	font-weight:bold;
+	font-size:14px;
+}
+
+.article1_2_2 li:first-child{
+	margin-top:20px;
+}
+
+.article1_2_2 li{
+	font-size:12px;
+	color:#666666;
+	margin:10px 0px;
+}
+
+.article1_2_2 li:last-child input{
+	width:60px;
+	height:25px;
+	background:#F90;
+	border:1px solid #F93;
+	color:#FFF;
+	margin-top:20px;
 	cursor:pointer;
 }
+
+.article1_2_2 li:last-child input:hover{
+	background:#F60;
+}
+
+.article1_2_2 input{
+	width:230px;
+	height:25px;
+	border:1px solid #CCCCCC;
+}
+
+.article1_2_2 textarea{
+	width:230px;
+}
+
+
+
+
+
 
 
 
 /*********************************************头部信息******************************************************/
+@charset "utf-8";
+/* CSS Document */
+
+
+
 *{
 	margin:0px auto;
 	padding:0px;
@@ -196,18 +330,37 @@ header{
 	height:80px;
 }
 
-.header2>div{
+.header2>.header2_1{
 	width:70%;
 	height:100%;
 }
 
-.header2>div>img{
+.header2>.header2_1>img{
 	display:inline-block;
 	width:30%;
 	height:100%;
 	background:#CCCCCC;
 	margin-left:10px;
 }
+
+/***************************************头部搜索部分**********************************************
+.header2>.header2_1 p{
+	display:inline-block;
+	float:right;
+	margin:30px 50px 0px 0px;
+	background:#F60;
+}
+.header2>.header2_1 input{
+	border:2px solid #F60;
+	width:250px;
+	height:30px;
+}
+
+.header2>.header2_1 p a{
+	color:#FFF;
+	font-size:14px;
+	padding:0px 10px 0px;
+}*/
 
 /*********************************************底部信息******************************************************/
 footer{

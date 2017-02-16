@@ -212,7 +212,7 @@ insert into t_commodity values(seq_t_commodity.nextval,'古玩','珠宝收藏','无','i
 --decode(ceil(dbms_random.value(0, 2)), 1, '男', '女'),
 --decode(ceil(dbms_random.value(0, 6)), 1, '程序员', 2, '测试员', 3, '分析员', 4, '设计员', 5, '翻译员', '管理员'),
 --decode(ceil(dbms_random.value(0, 6)), 1, '湖南', 2, '湖北', 3, '广东', 4, '广西', 5, '北京', '上海'),
---'180'||ceil(dbms_random.value(10000000,99999999)) from dual connect by level <= 1000;
+--'180'||ceil(dbms_random.value(10000000,99999999)) from dual connect by level < = 1000;
 
 
 --商品浏览量(每被点击查看一次, 点击量加一)
@@ -234,8 +234,8 @@ create table t_needcom(
 	naddress varchar2(40),								--用户当前所在地
 	ndate date ,										--发布求购信息时间
 	norder	Integer default 2,							--订单审核状态(1.待审核 2.通过 3.未通过)
-	nmessage varchar2(100) default '无',							--审核信息(比如未通过: 理由)
-	nadname varchar2(20)						--订单审核的管理员
+	nmessage varchar2(100) default '无',				--审核信息(比如未通过: 理由)
+	nadname varchar2(20)								--订单审核的管理员
 );
 
 create sequence seq_t_needcom increment by 1 start with 1;
@@ -267,7 +267,7 @@ create sequence seq_collects increment by 1 start with 1;
 create table dingdan(
 	did Integer primary key,							--订单编号
 	dno varchar2(20) not null unique,					--订单流水编号
-	dcid Integer not null,                   						--商品id
+	dcid Integer not null,                   			--商品id
 	dcname varchar2(30) not null,						--商品名称/标题(外键引用发布商品信息表标题)
 	daddress varchar2(200)	not null,					--收货地址
 	dusername varchar2(20) not null,					--支付用户		

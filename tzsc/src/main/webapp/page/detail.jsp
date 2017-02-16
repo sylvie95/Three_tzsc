@@ -4,8 +4,8 @@
 <head>
 <base href="/tzsc/">
 <meta charset="utf-8">
-<title>注册</title>
-<link type="text/css" rel="stylesheet" href="css/register.css">
+<title>详情页面</title>
+<link type="text/css" rel="stylesheet" href="css/detail.css">
 </head>
 
 <body>
@@ -32,27 +32,71 @@
     </div>
     
     <div class="header2">
-    	<div>
+    	<div class="header2_1">
         	<img/>
+            <p><input placeholder="请输入关键词..."/><a href="#">搜索</a></p>
         </div>
     </div>
 </header>
 
 <article>
-    <div class="article1_1">
-    	<div class="article2_1">
-        	<ul>
-                <li><span>*</span>&nbsp;用&nbsp;户&nbsp;名：<input placeholder="请输入4~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>登录密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>确认密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>&nbsp;&nbsp;手&nbsp;&nbsp;机&nbsp;&nbsp;：<input placeholder="请输入11位手机号码" required="required"/></li>
-                <li><span>*</span>&nbsp;验&nbsp;证&nbsp;码：<input style="width:80px;" placeholder="请输入验证码" required="required"/><input style="margin-left:10px;width:70px;" type="button" value="获取验证码"/></li>
-                <li style="position:relative;"><input style="width:0px;margin:0px 10px 0px 25px;" type="checkbox"/><span style="position:absolute;color:#999999;font-size:12px;margin-top:2px;">我已阅读并同意该网站协议</span></li>
-                <li style="position:relative;"><input class="register" type="button" value="立即注册"/><span>已有账号？<a href="#">登录</a></span></li>
-            </ul>
-            <img style="margin:90px 70px 0px 0px;float:right;" src="images/register1.png"/>
-        </div>
+	<div class="article1_1">
+    	<span>首页</span><span>搜索</span>
     </div>
+    
+    <div class="article1_2">
+    	<ul class="ul1_1 _ul1">
+        	<li>全部产品:</span></li>
+            <li><a href="#">全部</a></li>
+        	<li><a href="#">大型电器</a></li>
+            <li><a href="#">生活用品</a></li>
+            <li><a href="#">古董收藏</a></li>
+            <li><a href="#">电子产品</a></li>
+        </ul>
+        <ul class="ul1_1 _ul2">
+        	<li>详细产品:</li>
+            <li><a href="#">全部</li>
+        	<li><a href="#">手机</a></li>
+            <li><a href="#">电脑</a></li>
+            <li><a href="#">邮票</a></li>
+            <li><a href="#">冰箱</a></li>
+        </ul>
+        <ul class="ul1_1 _ul3">
+        	<li>产品筛选:</li>
+        	<li><a href="#">最新</a></li>
+            <li><a href="#">最热</a></li>
+        </ul>
+    </div>
+    
+    <div class="article1_3">
+    	<ul>
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    <div class="article1_4">
+    	<span><a href="#">上一页</a></span>
+        <ul>
+        	<li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>	
+        <span><a href="#">下一页</a></span>
+        <span><input value="1"/>跳转</span>
+    </div>
+
+
 </article>
 
 <footer>
@@ -107,6 +151,6 @@
 </footer>
 
 	
-	<script type="text/javascript" src="js/register.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>
