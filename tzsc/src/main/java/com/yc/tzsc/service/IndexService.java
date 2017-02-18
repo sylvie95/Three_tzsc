@@ -6,6 +6,10 @@ import com.yc.tzsc.entity.Commodity;
 
 public interface IndexService {
 
-	List<Commodity> listNew();
+	List<Commodity> listMenu(int menu);
+
+	List<Commodity> listMinMenu(int menu);
+
+	List<Commodity> newShop();
 
 }

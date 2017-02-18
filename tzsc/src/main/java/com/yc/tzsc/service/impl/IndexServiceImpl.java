@@ -13,11 +13,21 @@ import com.yc.tzsc.service.IndexService;
 public class IndexServiceImpl implements IndexService {
 	@Autowired
 	private IndexMapper indexMapper;
-	
+
 	@Override
-	public List<Commodity> listNew() {
+	public List<Commodity> listMenu(int menu) {
 		
-		return indexMapper.listNew();
+		return indexMapper.listMenu(menu);
+	}
+
+	@Override
+	public List<Commodity> listMinMenu(int menu) {
+		return indexMapper.listMinMenu(menu);
+	}
+
+	@Override
+	public List<Commodity> newShop() {
+		return indexMapper.newShop();
 	}
 
 }
