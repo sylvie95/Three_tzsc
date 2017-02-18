@@ -12,4 +12,6 @@ public interface IndexMapper {
 
 	List<Commodity> newShop();
 
+	List<Commodity> hotShop();
+
 }

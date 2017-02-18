@@ -1,6 +1,6 @@
 //加载主分类的小分类
 function indexMenu(menu){
-	$.get("tzsc/indexMenu?menu="+menu,function(data){
+	$.get("index/indexMenu?menu="+menu,function(data){
 		for(var i=0;i<data.length;i++){
 //				alert(data[i].mname);
 //			$("._tarblock li:nth-child("+menu+") dl").append("<dt id='ssm"+data[i].mid+"' name="+data[i].mid+"><a href='#'>"+data[i].mname+"</a></dt>");
@@ -11,7 +11,7 @@ function indexMenu(menu){
 };
 //细分分类
 function indexMinMenu(id){
-	$.get("tzsc/indexMinMenu?SMmenu="+id,function(SMdata){
+	$.get("index/indexMinMenu?SMmenu="+id,function(SMdata){
 		for(var z=0;z<SMdata.length;z++){
 			$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='#'>"+SMdata[z].smname+"</a></dd>");
 		}
@@ -25,31 +25,45 @@ function newMenu(){
 newMenu(1);
 
 //加载首页的热门试用
-/*$.get("tzsc/hot?SMmenu="+id,function(SMdata){
-	for(var z=0;z<SMdata.length;z++){
-		$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='#'>"+SMdata[z].smname+"</a></dd>");
+$.get("index/hotShop",function(data){
+	for(var i=0;i<data.length;i++){
+		if(data[i].cpic.split(";")!=null){
+			$(".article1_3_1").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
+            	'<form>'+
+            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic.split(";")[0]+'"/>'+
+            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
+            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
+            	'</form></div>');
+		}else{
+			$(".article1_3_1").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
+	            	'<form>'+
+	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic+'"/>'+
+	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
+	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
+	            	'</form></div>');
+		}
+		
 	}
-},"json");*/
+},"json");
+
 
 
 //加载首页的最新上市
-$.get("tzsc/newShop",function(data){
+$.get("index/newShop",function(data){
 	for(var i=0;i<data.length;i++){
-//		alert(data[i].cpic.split(";")[0]);
-//		alert(data[i].cdescribe);
 		if(data[i].cpic.split(";")!=null){
 			$(".article1_3_2").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
 	            	'<form>'+
 	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic.split(";")[0]+'"/>'+
 	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
+	            	'<div style="font-size:11px;"><span style="font-size:12px;font-weight:bold;margin-left:10px;color:#999999;">￥'+data[i].cprice+'</span><input class="_canyu" style="" type="button" value="立即参与"/></div>'+
 	            	'</form></div>');
 		}else{
 			$(".article1_3_2").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
 	            	'<form>'+
 	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic+'"/>'+
 	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
+	            	'<div style="font-size:11px;"><span style="font-size:12px;font-weight:bold;margin-left:10px;color:#999999;">￥'+data[i].cprice+'</span><input class="_canyu" style="" type="button" value="立即参与"/></div>'+
 	            	'</form></div>');
 		}
 		

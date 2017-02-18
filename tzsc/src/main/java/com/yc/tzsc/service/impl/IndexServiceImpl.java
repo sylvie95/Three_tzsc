@@ -25,9 +25,16 @@ public class IndexServiceImpl implements IndexService {
 		return indexMapper.listMinMenu(menu);
 	}
 
+	//按时间排序最新发布的产品
 	@Override
 	public List<Commodity> newShop() {
 		return indexMapper.newShop();
+	}
+
+	//点击量排行高的产品
+	@Override
+	public List<Commodity> hotShop() {
+		return indexMapper.hotShop();
 	}
 
 }
