@@ -176,7 +176,7 @@ create table t_commodity(
 	cname varchar2(30) not null,						--商品名称/标题		(不能为空)
 	ctname varchar2(10) not null,						--商品类型			(不能为空)
 	cdescribe varchar2(400) default '卖家有点懒, ',		--商品描述	
-	cpic varchar2(100),						--商品图片信息(  可多张, 以 ; 分隔  )
+	cpic varchar2(100),									--商品图片信息(  可多张, 以 ; 分隔  )
 	cprice float not null,								--商品出售价格		(不能为空)
 	cusername varchar2(20) not null,					--商品卖家( 发布商品的用户 )
 	caddress varchar2(40),								--用户当前所在地

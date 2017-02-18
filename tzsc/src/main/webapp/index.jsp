@@ -1,5 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <base href="/tzsc/">
@@ -44,129 +44,51 @@
     	<ul class="">
         	<li><img style="margin-bottom:-5px;margin-right:20px;" src="images/index1.png"/><span style="display:inline-block;">热门交易分类</span>
             	<ul class="_tarblock">
-                	<li>家用电器
+                	<li>闲置数码
                     	<div class="_tar _block" style="">
-                        	<dl>
-                            	<dt>大型电器1</dt>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
-                                <dd><a href="#">冰箱1</a></dd>
+                        	<dl id="">
+                            	<!-- <dt>大型电器1
+	                            	<dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                                <dd><a href="#">冰箱1</a></dd>
+	                             </dt>
+                                 -->
                             </dl>
                         </div>
                     </li>
-                    <li>电子产品
+                    <li>学习用品
                     	<div class="_tar _block" style="">
                         	<dl>
-                            	<dt>大型电器2</dt>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
-                                <dd>冰箱2</dd>
                             </dl>
                         </div>
                     </li>
-                    <li>生活用品
+                    <li>影音家电
                     	<div class="_tar _block" style="">
                         	<dl>
-                            	<dt>大型电器3</dt>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
-                                <dd>冰箱3</dd>
                             </dl>
                         </div>
                     </li>
-                    <li>家用电器
+                    <li>鞋服配饰
                     	<div class="_tar _block" style="">
                         	<dl>
-                            	<dt>大型电器4</dt>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
-                                <dd>冰箱4</dd>
                             </dl>
                         </div>
                     </li>
-                    <li>家用电器
+                    <li>珠宝收藏
                     	<div class="_tar _block" style="">
                         	<dl>
-                            	<dt>大型电器5</dt>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
-                                <dd>冰箱5</dd>
                             </dl>
                         </div>
                     </li>
-                    <li>家用电器
+                    <li>家具日用
                     	<div class="_tar _block" style="">
                         	<dl>
-                            	<dt>大型电器6</dt>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dt>大型电器6</dt>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dt>大型电器6</dt>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dt>大型电器6</dt>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
-                                <dd>冰箱6</dd>
                             </dl>
                         </div>
                     </li>
@@ -181,11 +103,11 @@
     <!-- 首页广告图片 -->
     <div class="article1_2">
     	<img id="chaPic" src="images/banner1.jpg"/>
-        <div class="chaPic_span"><span></span><span></span><span></span><span></span></div>
+        <!-- <div class="chaPic_span"><span></span><span></span><span></span><span></span></div> -->
     </div>
     <!-- 下方内容 -->
     <div class="article1_3">
-    	<div class="_title"><span>热门试用</span><a href="#">更多>></a></span></div>
+    	<div class="_title"><span>热门点击</span><a href="#">更多>></a></span></div>
     	<div class="article1_3_1">
         	<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
             	<form>
@@ -216,9 +138,9 @@
                 </form>
             </div>
         </div>
-        <div class="_title"><span>新品上市</span><a href="#">更多>></a></div>
+        <div class="_title"><span>最新发布</span><a href="#">更多>></a></div>
         <div class="article1_3_2">
-        	<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
+        	<!-- <div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
             	<form>
                 	<img style="width:100%;" src="images/171556ce44fa144231.jpg"/>
                     <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
@@ -243,7 +165,7 @@
                     <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
                     <div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>
                 </form>
-            </div>
+            </div> -->
         </div>
         <div class="_title"><span>热门试用</span><a href="#">更多>></a></div>
         <div class="article1_3_3">
@@ -356,6 +278,7 @@
 </footer>
 
 	
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
