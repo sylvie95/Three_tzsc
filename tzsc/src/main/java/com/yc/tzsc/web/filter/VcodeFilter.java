@@ -34,7 +34,7 @@ public class VcodeFilter extends AbstractFilter{
 		}else{
 			LogManager.getLogger().debug("过滤器VcodeFilter验证验证码失败.....");
 			session.setAttribute("errorMsg", "验证码错误！！！");
-			((HttpServletResponse) response).sendRedirect("/ccs/login.jsp");
+			((HttpServletResponse) response).sendRedirect("/tzsc/login.jsp");
 		}
 		
 		
