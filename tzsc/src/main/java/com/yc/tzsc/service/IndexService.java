@@ -12,4 +12,6 @@ public interface IndexService {
 
 	List<Commodity> newShop();
 
+	List<Commodity> hotShop();
+
 }

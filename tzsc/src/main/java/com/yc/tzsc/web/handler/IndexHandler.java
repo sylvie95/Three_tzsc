@@ -15,7 +15,7 @@ import com.yc.tzsc.entity.Commodity;
 import com.yc.tzsc.service.IndexService;
 
 @Controller
-@RequestMapping("/tzsc")
+@RequestMapping("/index")
 public class IndexHandler {
 	@Autowired
 	private IndexService indedxService;
@@ -38,6 +38,17 @@ public class IndexHandler {
 		return listMinNew;
 	}
 	
+	//点击量排行最高的4条产品记录
+	@RequestMapping("/hotShop")
+	@ResponseBody
+	public List<Commodity> hotShop(HttpSession session){
+		LogManager.getLogger().debug("请求hotShop处理加载首页小分类功能...");
+		List<Commodity> hotShop = indedxService.hotShop();
+		System.out.println(hotShop);
+		return hotShop;
+	}
+	
+	//最新发布的产品
 	@RequestMapping("/newShop")
 	@ResponseBody
 	public List<Commodity> newShop(HttpSession session){
