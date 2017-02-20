@@ -55,6 +55,10 @@ create table t_admin(
 	alevel Integer default 2							  --管理员权限等级 (1.超级管理员   2.普通管理员)
 );
 
+select * from T_COMMODITY where cid = 48;
+
+select cusername,cdate,cprice,cpic,caddress from T_COMMODITY where cid = 49;
+
 create sequence seq_t_admin increment by 1 start with 1;
 insert into t_admin values(seq_t_users.nextval,'admin','a','admin','男','15386003052','1451932421@qq.com',1);
 insert into t_admin values(seq_t_users.nextval,'LSY','a','LSY','男','15386003052','1451932421@qq.com',2);
@@ -168,6 +172,10 @@ insert into t_smin values(seq_t_smin.nextval,23,'壁灯');
 
 select * from t_smin;
 
+ 
+select * from (select * from t_commodity order by  cdate DESC ) where rownum<5;
+
+select cusername,cdate,cprice,cpic,caddress from T_COMMODITY where cid=49;
 
 --商品发布表(发布商品时所需告知, 显示的信息表)
 --drop table t_commodity;
@@ -189,8 +197,15 @@ create table t_commodity(
 	cmessage varchar2(100) default '无',							--审核信息(比如未通过: 理由)
 	cadminname varchar2(20)								--订单审核的管理员
 );
-
+commit;
 create sequence seq_t_commodity increment by 1 start with 1;
+select * from T_COMMODITY;
+insert into t_commodity values(seq_t_commodity.nextval,'闲置手机','手机','韩版，移动联通双4G，指纹能用，外观轻微刮痕，9成新以上，喜欢的留言或者私聊','TB1QmdTPFXXXXc.XXXX_SIY7VXX_728x728.jpg;TB1MKJVPFXXXXcmXXXXreZZ7VXX_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'Sony/索尼 DSC-W310数码相机','相机','Sony/索尼 DSC-W310数码相机 1200万像素4倍光变 广角卡片机 现闲置转给有需要的朋友，附赠相机包、内存卡、读卡器、迷你三脚架，由于搬家充电器找不到了，本人一直用万能充充电请买家熟知，二手物品售出概不退货，请买家购买前充分了解，买卖讲究诚信，本人并非经营二手物品，只是个人闲置物品出售。
+','TB1dWFnKFXXXXXAXXXXtUp08pXX_728x728.jpg;TB282YFqVXXXXXeXXXXXXXXXXXX_!!0-fleamarket.jpg_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'hp扫描仪','电脑','9成新，用不着了，没毛病，占地方需要的拿去','TB13pCCLpXXXXb_XVXX2WCJ.VXX_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+insert into t_commodity values(seq_t_commodity.nextval,'【1212品牌盛典】【苏宁易购】lenovo/联想天','电脑','感兴趣的话给我留言吧！','TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+
 
 insert into t_commodity values(seq_t_commodity.nextval,'闲置手机','闲置数码','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 insert into t_commodity values(seq_t_commodity.nextval,'台式电脑','闲置数码','无','images/pic.jsg',2350,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
@@ -205,16 +220,7 @@ insert into t_commodity values(seq_t_commodity.nextval,'石英手表','珠宝收
 insert into t_commodity values(seq_t_commodity.nextval,'长城邮票','珠宝收藏','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 insert into t_commodity values(seq_t_commodity.nextval,'古玩','珠宝收藏','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 
---insert into PROFILE
---select seq_t_commodiy.nextval, 
---dbms_random.string('l',dbms_random.value(5, 20)),
---to_char(add_months(sysdate, dbms_random.value(12*18, 12*50) * -1), 'yyyy-MM-dd'),
---decode(ceil(dbms_random.value(0, 2)), 1, '男', '女'),
---decode(ceil(dbms_random.value(0, 6)), 1, '程序员', 2, '测试员', 3, '分析员', 4, '设计员', 5, '翻译员', '管理员'),
---decode(ceil(dbms_random.value(0, 6)), 1, '湖南', 2, '湖北', 3, '广东', 4, '广西', 5, '北京', '上海'),
---'180'||ceil(dbms_random.value(10000000,99999999)) from dual connect by level <= 1000;
-
-
+select * from (select * from t_commodity order by  cdate DESC ) where rownum <5;
 --商品浏览量(每被点击查看一次, 点击量加一)
 create table t_num(										
 	cid references t_commodity(cid),					--外键引用商品详情表id		
@@ -251,7 +257,14 @@ create table comments(
 	comdate date
 );
 
+select * from comments;
 create sequence seq_comments increment by 1 start with 1;
+
+insert into comments values(seq_comments.nextval, 49,'这个可小刀吗','zmy',sysdate);
+insert into comments values(seq_comments.nextval, 48,'这个可小刀吗','zmy',sysdate);
+insert into comments values(seq_comments.nextval, 46,'这个可小刀吗','zmy',sysdate);
+insert into comments values(seq_comments.nextval, 45,'这个可小刀吗','zmy',sysdate);
+
 
 --收藏夹
 create table collects(

@@ -140,32 +140,7 @@
         </div>
         <div class="_title"><span>最新发布</span><a href="#">更多>></a></div>
         <div class="article1_3_2">
-        	<!-- <div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
-            	<form>
-                	<img style="width:100%;" src="images/171556ce44fa144231.jpg"/>
-                    <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
-                    <div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>
-                </form>
-            </div>
-            <div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
-            	<form>
-                	<img style="width:100%;" src="images/171556ce44fa144231.jpg"/>
-                    <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
-                    <div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>
-                </form>
-            </div><div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
-            	<form>
-                	<img style="width:100%;" src="images/171556ce44fa144231.jpg"/>
-                    <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
-                    <div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>
-                </form>
-            </div><div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">
-            	<form>
-                	<img style="width:100%;" src="images/171556ce44fa144231.jpg"/>
-                    <p style="height:47px;margin-left:10px;font-size:14px;color:#F60;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
-                    <div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>
-                </form>
-            </div> -->
+        	 
         </div>
         <div class="_title"><span>热门试用</span><a href="#">更多>></a></div>
         <div class="article1_3_3">
@@ -176,7 +151,7 @@
                     	免费赠送不用的手机
                     </dt>
                     <dd>
-                    	刚灌灌灌灌灌过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过灌灌灌灌灌过过过过过过过过过过过过过过过过过过
+                    	刚灌灌灌灌灌过过过过过过过过 过过过过过过过过过过过过 过过过过过过过过过过
                     </dd>
                 </dl>
             </div>
