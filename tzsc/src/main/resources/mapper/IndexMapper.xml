@@ -7,6 +7,10 @@
 		select * from t_mintype where tid = #{menu}
 	</select>
 	
+	<select id="listMenu1" resultType="MinType" parameterType="int">
+		select * from t_mintype 
+	</select>
+	
 	<select id="listMinMenu" resultType="SMixType" parameterType="int">
 		select * from t_smin where mid = #{menu1}
 	</select>

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.tzsc.entity.Commodity;
+import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.entity.SMixType;
 import com.yc.tzsc.service.IndexService;
 
 @Controller
@@ -22,18 +24,24 @@ public class IndexHandler {
 	
 	@RequestMapping("/indexMenu")
 	@ResponseBody
-	public List<Commodity> indexMenu(@RequestParam("menu")int menu, HttpSession session){
+	public List<MinType> indexMenu(@RequestParam("menu")int menu, HttpSession session){
 		LogManager.getLogger().debug("请求indexMenu处理加载首页主分类功能...");
-		List<Commodity> listNew = indedxService.listMenu(menu);
+		List<MinType> listNew = null;
+		if(menu==0){
+			listNew = indedxService.listMenu();
+		}else{
+
+			listNew = indedxService.listMenu(menu);
+		}
 //		System.out.println(listNew);
 		return listNew;
 	}
 	
 	@RequestMapping("/indexMinMenu")
 	@ResponseBody
-	public List<Commodity> indexMinMenu(@RequestParam("SMmenu")int SMmenu, HttpSession session){
+	public List<SMixType> indexMinMenu(@RequestParam("SMmenu")int SMmenu, HttpSession session){
 		LogManager.getLogger().debug("请求indexMinMenu处理加载首页小分类功能...");
-		List<Commodity> listMinNew = indedxService.listMinMenu(SMmenu);
+		List<SMixType> listMinNew = indedxService.listMinMenu(SMmenu);
 //		System.out.println(listMinNew);
 		return listMinNew;
 	}
