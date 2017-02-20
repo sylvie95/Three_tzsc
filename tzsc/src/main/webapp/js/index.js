@@ -2,18 +2,17 @@
 function indexMenu(menu){
 	$.get("index/indexMenu?menu="+menu,function(data){
 		for(var i=0;i<data.length;i++){
-//				alert(data[i].mname);
-//			$("._tarblock li:nth-child("+menu+") dl").append("<dt id='ssm"+data[i].mid+"' name="+data[i].mid+"><a href='#'>"+data[i].mname+"</a></dt>");
+			//sousuo/souMenu=menu?&smname="+data[i].mname+"
 			$("._tarblock li:nth-child("+menu+") dl").append("<dt id='ssm"+data[i].mid+"' name="+data[i].mid+"><a style='display:block' href='#'>"+data[i].mname+"</a></dt>");
-			indexMinMenu(data[i].mid);
+			indexMinMenu(menu,data[i].mid);
 		}
 	},"json");
 };
 //细分分类
-function indexMinMenu(id){
+function indexMinMenu(number,id){
 	$.get("index/indexMinMenu?SMmenu="+id,function(SMdata){
 		for(var z=0;z<SMdata.length;z++){
-			$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='#'>"+SMdata[z].smname+"</a></dd>");
+			$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='sousuo/souMenu?souA="+number+"&souB="+id+"&smname="+SMdata[z].smname+"'>"+SMdata[z].smname+"</a></dd>");
 		}
 	},"json");
 }

@@ -69,7 +69,7 @@
         <!-- 右侧部分： 详细信息 -->
         <div class="article1_2_2">
         	<span>基本资料</span>
-        	<form style="display:none">
+        	<form style="display:blocks">
             	<ul>
                 	<li>用&nbsp;户&nbsp;&nbsp;名：<input/></li>
                    	<li>手机号码：<input/></li>
@@ -81,7 +81,7 @@
                     <li><input type="button" value="保存"/></li>
                 </ul>
             </form>
-            <form>
+            <form style="display:none">
             	<ul>
                 	<li>原&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
                    	<li>新&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>

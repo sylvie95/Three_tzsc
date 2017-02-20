@@ -46,31 +46,39 @@
     
     <div class="article1_2">
     	<ul class="ul1_1 _ul1">
-        	<li>全部产品:</span></li>
-            <li><a href="#">全部</a></li>
-        	<li><a href="#">大型电器</a></li>
-            <li><a href="#">生活用品</a></li>
-            <li><a href="#">古董收藏</a></li>
-            <li><a href="#">电子产品</a></li>
+        	<li style="font-weight:bold;">全部类型:</span></li>
+            <li><a onclick="menuAClick()" class="menuA0" href="sousuo/souMenu?souA=0&souB=1&smname=1">全部</a></li>
+        	<li><a onclick="menuAClick()" class="menuA1" href="sousuo/souMenu?souA=1&souB=1&smname=1">闲置数码</a></li>
+            <li><a class="menuA2" href="sousuo/souMenu?souA=2&souB=1&smname=1">学习用品</a></li>
+            <li><a class="menuA3" href="sousuo/souMenu?souA=3&souB=1&smname=1">影音家电</a></li>
+            <li><a class="menuA4" href="sousuo/souMenu?souA=4&souB=1&smname=1">鞋服配饰</a></li>
+            <li><a class="menuA5" href="sousuo/souMenu?souA=5&souB=1&smname=1">珠宝收藏</a></li>
+            <li><a class="menuA6" href="sousuo/souMenu?souA=6&souB=1&smname=1">家具日用</a></li>
         </ul>
         <ul class="ul1_1 _ul2">
-        	<li>详细产品:</li>
-            <li><a href="#">全部</li>
+        	<li style="font-weight:bold;">产品类型:</li>
+        	<li><a class="menuB0" href="sousuo/souMenu?souA=0&souB=1&smname=1">全部</a></li>
+            <!-- <li><a href="#">全部</li>
         	<li><a href="#">手机</a></li>
             <li><a href="#">电脑</a></li>
             <li><a href="#">邮票</a></li>
-            <li><a href="#">冰箱</a></li>
+            <li><a href="#">冰箱</a></li> -->
         </ul>
         <ul class="ul1_1 _ul3">
-        	<li>产品筛选:</li>
-        	<li><a href="#">最新</a></li>
-            <li><a href="#">最热</a></li>
+        	<li style="font-weight:bold;">产品名称:</li>
+        	<li><a class="menuC0" href="sousuo/souMenu?souA=0&souB=1&smname=1">全部</a></li>
+        	<!-- <li><a href="#">最新</a></li>
+            <li><a href="#">最热</a></li> -->
         </ul>
     </div>
     
     <div class="article1_3">
     	<ul>
         	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
             <li></li>
             <li></li>
             <li></li>
@@ -151,6 +159,7 @@
 </footer>
 
 	
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>

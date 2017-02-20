@@ -1,10 +1,8 @@
-<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<base href="/tzsc/">
 <meta charset="utf-8">
-<title>详情页面</title>
+<title>发布页面</title>
 <link type="text/css" rel="stylesheet" href="css/fabu.css">
 </head>
 
@@ -40,6 +38,82 @@
 </header>
 
 <article>
+    <div class="article1_1">
+            <ul class="ul1_1">
+                <li><span></span></li>
+                <li><a href="#">首页</a></li>
+                <li>功能中心</li>
+                <li></li>
+            </ul>
+        </div>
+        
+        <div class="article1_2">
+            <!-- 左侧部分： 头像以及功能选项 -->
+            <div class="article1_2_1">
+                <!-- 头像部分 -->
+                <div class="userPic">
+                    <img src="images/footer1.png"/>
+                    <!-- <span><a href="#">更改头像</a><input id="chaPic" type="file" value="更换头像"/> --></span>
+                </div>
+                <!--  功能选项部分 -->
+                <div class="userMenu">
+                    <ul class="ul2_1">
+                        <li>功能中心</li>
+                        <li class="huise"><a href="#">我要发布</a></li>
+                        <li ><a href="#">我要求购</a></li>
+                        <li ><a href="#">我的发布</a></li>
+                        <li ><a href="#">我的求购</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧部分： 详细信息 -->
+            <div class="article1_2_2">
+                <span>我要发布</span>
+                <form style="display:none">
+                    <ul>
+                        <li>用&nbsp;户&nbsp;&nbsp;名：<input/></li>
+                        <li>手机号码：<input/></li>
+                        <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input/></li>
+                        <li>Q&nbsp;Q号码：<input/></li>
+                        <li>电子邮箱：<input/></li>
+                        <li>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：<input/></li>
+                        <li>个人简介：<textarea></textarea></li>
+                        <li><input type="button" value="保存"/></li>
+                    </ul>
+                </form>
+                <form style="display:none">
+                    <ul>
+                        <li>原&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
+                        <li>新&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
+                        <li>确认密码：<input type="password"/></li>
+                        <li><input type="button" value="保存"/></li>
+                    </ul>
+                </form>
+                <form class="form3">
+                    <ul>
+                        <li><label>标题</label><input/></li>
+                        <li><label>类型</label><select><option>你好</option></select><select><option>你好</option></select></li>
+                        <li><label>描述</label><textarea></textarea></li>
+                        <li><label>价格</label><input/></li>
+                        <li>
+                            <ul class="imgul">
+                                <li><img class="img0"/></li>
+                                <li><img class="img1"/></li>
+                                <li><img class="img2"/></li>
+                                <li><img class="img3"/></li>
+                                <li><img class="img4"/></li>
+                                <li id="addImgli"><span id="addImg"></span></li>
+                                <li><input id="addPic" type="file" onchange="chgPic(this)" style="visibility:hidden"/></li>
+                            </ul>
+                        </li>
+                        <li><label>联系电话</label><input/></li>
+                        <li><label>QQ</label><input/></li>
+                        <li><input id="fabuBtn" type="button" value="发布"/></li>
+                    </ul>
+       			</form>
+            </div>
+        </div>
+        <!--
 	<div class="article1_1">
         <span><a href="#">首页</a></span><span>&nbsp;&nbsp;>&nbsp;&nbsp;发布闲置</span>
     </div>
@@ -67,7 +141,7 @@
             </ul>
             
         </form>
-    </div>
+    </div>-->
 </article>
 
 <footer>

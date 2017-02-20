@@ -1,0 +1,42 @@
+package com.yc.tzsc.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.yc.tzsc.entity.Commodity;
+import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.mapper.SousuoMapper;
+import com.yc.tzsc.service.SousuoService;
+
+@Service("sousuoService")
+public class SousuoServiceImpl implements SousuoService {
+	@Autowired
+	private SousuoMapper sousuoMapper;
+
+	@Override
+	public List<Commodity> souMenu(String menuName) {
+		
+		return sousuoMapper.souMenu(menuName);
+	}
+
+	@Override
+	public List<Commodity> menuNo(int menuNo) {
+		
+		return sousuoMapper.menuNo(menuNo);
+	}
+
+	@Override
+	public List<Commodity> sousuoStr(Commodity strName) {
+		
+		return sousuoMapper.sousuoStr(strName);
+	}
+
+	@Override
+	public MinType selectMinTypeName(int strNo) {
+		
+		return sousuoMapper.selectMinTypeName(strNo);
+	}
+
+}

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yc.tzsc.entity.Commodity;
+import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.entity.SMixType;
 import com.yc.tzsc.mapper.IndexMapper;
 import com.yc.tzsc.service.IndexService;
 
@@ -15,13 +17,19 @@ public class IndexServiceImpl implements IndexService {
 	private IndexMapper indexMapper;
 
 	@Override
-	public List<Commodity> listMenu(int menu) {
+	public List<MinType> listMenu(int menu) {
 		
 		return indexMapper.listMenu(menu);
 	}
 
 	@Override
-	public List<Commodity> listMinMenu(int menu) {
+	public List<MinType> listMenu() {
+		// TODO Auto-generated method stub
+		return indexMapper.listMenu1();
+	}
+
+	@Override
+	public List<SMixType> listMinMenu(int menu) {
 		return indexMapper.listMinMenu(menu);
 	}
 
@@ -36,5 +44,6 @@ public class IndexServiceImpl implements IndexService {
 	public List<Commodity> hotShop() {
 		return indexMapper.hotShop();
 	}
+
 
 }
