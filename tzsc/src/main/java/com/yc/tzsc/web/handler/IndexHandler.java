@@ -30,7 +30,6 @@ public class IndexHandler {
 		if(menu==0){
 			listNew = indedxService.listMenu();
 		}else{
-
 			listNew = indedxService.listMenu(menu);
 		}
 //		System.out.println(listNew);
