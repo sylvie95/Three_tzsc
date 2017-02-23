@@ -1,5 +1,6 @@
 package com.yc.tzsc.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,9 @@ import java.util.Date;
  * @author LSY
  * 商品发布详情表( 商品详情 )
  */
-public class Commodity {
+public class Commodity implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	private int cid;					//商品编号
 	private String cname;				//商品名称
 	private String ctname;				//商品总分类
@@ -28,10 +31,11 @@ public class Commodity {
 	public Commodity() {
 	}
 
-	public Commodity(String cname, String ctname, String cdescribe, String cpic, double cprice, String cusername,
-			String caddress, String cphone, int cpostage, String cqq, Date cdate, int cstate_com, int cstate_dingdan,
-			String cmessage, String cadminname) {
+	public Commodity(int cid, String cname, String ctname, String cdescribe, String cpic, double cprice,
+			String cusername, String caddress, String cphone, int cpostage, String cqq, Date cdate, int cstate_com,
+			int cstate_dingdan, String cmessage, String cadminname) {
 		super();
+		this.cid = cid;
 		this.cname = cname;
 		this.ctname = ctname;
 		this.cdescribe = cdescribe;
@@ -48,6 +52,8 @@ public class Commodity {
 		this.cmessage = cmessage;
 		this.cadminname = cadminname;
 	}
+
+
 
 	public int getCid() {
 		return cid;

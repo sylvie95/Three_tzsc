@@ -73,23 +73,49 @@
     </div>
     
     <div class="article1_3">
-    	<ul>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    	<ul class="article1_3_ul">
+        	<li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
+            <li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
+        	<li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
+        	<li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
+        	<li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
+        	<li>
+        		<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">
+                	<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>
+                    <p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">免费赠送一个闲置的手机免费赠送一个闲置的手机</p>
+                    <div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>
+	            </div>
+        	</li>
         </ul>
     </div>
     

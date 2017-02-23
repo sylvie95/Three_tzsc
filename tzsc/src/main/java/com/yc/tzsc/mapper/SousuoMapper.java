@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.yc.tzsc.entity.Commodity;
 import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.entity.PaginationBean;
 
 public interface SousuoMapper {
 
@@ -11,8 +12,10 @@ public interface SousuoMapper {
 
 	List<Commodity> menuNo(int menuNo);
 
-	List<Commodity> sousuoStr(Commodity strName);
-
 	MinType selectMinTypeName(int strNo);
+
+	PaginationBean<Commodity> listPartSousuo(PaginationBean<Commodity> userBean);
+
+	List<Commodity> sousuoStr(Commodity commodity);
 
 }
