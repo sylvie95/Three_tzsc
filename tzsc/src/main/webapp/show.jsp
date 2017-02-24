@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
+ 
 <head>
 <base href="/tzsc/">
  <script type="text/javascript" async src="detail_files/entry_002.js"></script><script type="text/javascript" async src="detail_files/agp_heat_002.js"></script><script type="text/javascript" async charset="utf-8" src="detail_files/core_002.php"></script> <script src="detail_files/adapter.js"></script><script type="text/javascript" async src="detail_files/entry.js"></script><script type="text/javascript" async src="detail_files/agp_heat.js"></script><script type="text/javascript" async src="detail_files/index.js"></script>  <script src="detail_files/a_008.txt" async charset="utf-8"></script><script src="detail_files/compiler-min.js" async charset="utf-8"></script><script src="detail_files/runtime-min.js" async charset="utf-8"></script><script src="detail_files/webww.js" async></script><script src="detail_files/overlay-min.js" async charset="utf-8"></script><script src="detail_files/facade-min.js" async charset="utf-8"></script><script type="text/javascript" async charset="utf-8" src="detail_files/core.php"></script><script>/* 2016-12-15 20:52:31 */
@@ -16,6 +17,7 @@ delete callbackMap[a],i.deferred&&delete callbackMap[n],i},useIframe:function(t,
 		<script>window.g_config={appId:1007,toolbar:false};</script>
 		
     
+
 <!-- start idle vmcommon assets 4.0-->
 <link rel="shortcut icon" type="image/x-icon" href="https://www.taobao.com/favicon.ico">
 <link rel="search" type="application/opensearchdescription+xml" href="https://assets.alicdn.com/plugins/opensearch/provider.xml" title="易淘购物">
@@ -282,10 +284,121 @@ style.firebugResetStyles {
     position: fixed !important;
 
     pointer-events: auto !important;
-
+    
 }
 
-</style></head>
+</style>
+<style type="text/css">
+.Main {
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.Input_Box {
+	width: 495px;
+	height: 160px;
+	border: 1px solid #ccc;
+	transition: border linear .2s, box-shadow linear .5s;
+	-moz-transition: border linear .2s, -moz-box-shadow linear .5s;
+	-webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	overflow: hidden;
+	position: absolute;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+}
+.Input_Box>textarea {
+	width: 485px;
+	height: 111px;
+	padding: 5px;
+	outline: none;
+	border: 0px solid #fff;
+	resize: none;
+	font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.Input_Foot {
+	width: 100%;
+	height: 35px;
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	position: absolute;
+}
+.imgBtn {
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;
+	background-image: url(imgs.png);
+	background-repeat: no-repeat;
+	background-position: 0 -13px;
+	height: 18px;
+	width: 20px;
+	cursor: pointer
+}
+.imgBtn:active {
+	margin-top: 9px;
+}
+.imgBtn:hover {
+	background-position: 0 -31px
+}
+.postBtn {
+	float: right;
+	font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #808080;
+	padding: 9px 20px 7px 20px;
+	border-left: 1px solid #ccc;
+	cursor: pointer;
+	-moz-border-radius: 0 0 5px 0;
+	-webkit-border-radius: 0 0 5px 0;
+	border-radius: 0 0 5px 0;
+}
+.postBtn:hover {
+	color: #333;
+	background-color: #efefef;
+}
+.postBtn:active {
+	padding: 10px 20px 6px 20px;
+}
+.faceDiv {
+	width: 500px;
+	height: 120px;
+	border-top: 1px solid #ccc;
+	position: absolute;
+	background-color: #fff;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.faceDiv>img {
+	border: 1px solid #ccc;
+	float: left;
+	margin-left: -1px;
+	margin-top: -1px;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	padding: 3px 3px 3px 3px;
+	cursor: pointer;
+}
+.faceDiv>img:hover {
+	background-color: #efefef;
+}
+.faceDiv>img:active {
+	padding: 4px 3px 2px 3px;
+}
+</style>
+
+</head>
     <body class="w1190"> 
   <!-- S GLOBAL HTML -->
 <div id="J_SiteNav" class="site-nav">
@@ -631,25 +744,23 @@ class="arrow"&gt;&lt;/i&gt;&lt;/b&gt;
 		
       
 	
-    <div id="message"  >
+    <div id="message" data-spm="2007.1000338.11">
         <h2><b>留言</b></h2>
  <div class="cmt-list-wrap"><div class="cmt-list">
-    
-       <!-- <div class="cmt-item clearfix" data-cmtid="1662768390" data-nick="${comments.comusername}" data-userid="0">
-         
-         <div class="cmt-cont-wrap">
-            <p class="cmt-cont">
-                <span class="cmt-user-name">${comments.comusername}</span>
-                <span class="cmt-cont-text">回复${comments.comusername}:点我想要私聊</span>
-            </p> 
-            <p class="cmt-date">${comments.comdate}</p>
-        </div> -->
-    </div>   
-    
-    
-    
-   
+
+
 </div>
+<h2><b>评论</b></h2>
+<div id="Demo" style="text-align:center;">
+  <div class="Main">
+    <div class="Input_Box">
+      <textarea class="Input_text"></textarea>
+      <div class="faceDiv"> </div>
+      <div class="Input_Foot"> <a class="imgBtn" href="javascript:void(0);"></a><a class="postBtn">确定</a> </div>
+    </div>
+  </div>
+</div>
+
 <div class="cmt-pager" id="cmt-pager-container"><span class="pagination-start"><span>上一页</span></span><span class="pagination-curr">1</span><span class="pagination-end"><span>下一页</span></span></div></div></div>
 		<input id="J_Token" name="_tb_token_" value="ee47e3bbe8957" type="hidden">
     </div>
@@ -702,7 +813,7 @@ class="arrow"&gt;&lt;/i&gt;&lt;/b&gt;
 			KISSY.config({combine:true});
    	 		KISSY.use('page/detail');
 		</script>
-		 
+		<script src="detail_files/c.php" language="JavaScript"></script>
 				<!--
 <div class="sh-footer" data-spm="2007.1000261.99">
 
@@ -870,11 +981,145 @@ class="arrow"&gt;&lt;/i&gt;&lt;/b&gt;
 <script>
   KISSY.use('widget/footer5/index');
 </script>
+<script src="http://www.pengyaou.com/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    ImgIputHandler.Init();
+});
+var ImgIputHandler={
+	facePath:[
+	    {faceName:"weixiao",facePath:"0_weixiao.gif"},
+		{faceName:"piezui",facePath:"1_piezui.gif"},
+		{faceName:"se",facePath:"2_se.gif"},
+		{faceName:"fadai",facePath:"3_fadai.gif"},
+		{faceName:"deyi",facePath:"4_deyi.gif"},
+		{faceName:"liulei",facePath:"5_liulei.gif"},
+		{faceName:"haixiu",facePath:"6_haixiu.gif"},
+		{faceName:"bizui",facePath:"7_bizui.gif"},
+		{faceName:"daku",facePath:"9_daku.gif"},
+		{faceName:"ganga",facePath:"10_ganga.gif"},
+		{faceName:"fanu",facePath:"11_fanu.gif"},
+		{faceName:"tiaopi",facePath:"12_tiaopi.gif"},
+		{faceName:"ziya",facePath:"13_ziya.gif"},
+		{faceName:"jingya",facePath:"14_jingya.gif"},
+		{faceName:"nanguo",facePath:"15_nanguo.gif"},
+		{faceName:"ku",facePath:"16_ku.gif"},
+		{faceName:"lenghan",facePath:"17_lenghan.gif"},
+		{faceName:"zhuakuang",facePath:"18_zhuakuang.gif"},
+		{faceName:"tu",facePath:"19_tu.gif"},
+		{faceName:"touxiao",facePath:"20_touxiao.gif"},
+	    {faceName:"keai",facePath:"21_keai.gif"},
+		{faceName:"baiyan",facePath:"22_baiyan.gif"},
+		{faceName:"aoman",facePath:"23_aoman.gif"},
+		{faceName:"jie",facePath:"24_jie.gif"},
+		{faceName:"kun",facePath:"25_kun.gif"},
+		{faceName:"jingkong",facePath:"26_jingkong.gif"},
+		{faceName:"liuhan",facePath:"27_liuhan.gif"},
+		{faceName:"hanxiao",facePath:"28_hanxiao.gif"},
+		{faceName:"dabin",facePath:"29_dabin.gif"},
+		{faceName:"fendou",facePath:"30_fendou.gif"},
+		{faceName:"zhouma",facePath:"31_zhouma.gif"},
+		{faceName:"yiwen",facePath:"32_yiwen.gif"},
+		{faceName:"xu",facePath:"33_xu.gif"},
+		{faceName:"yun",facePath:"34_yun.gif"},
+		{faceName:"zhemo",facePath:"35_zhemo.gif"},
+		{faceName:"shuai",facePath:"36_shuai.gif"},
+		{faceName:"kulou",facePath:"37_kulou.gif"},
+		{faceName:"qiaoda",facePath:"38_qiaoda.gif"},
+		{faceName:"zaijian",facePath:"39_zaijian.gif"},
+		{faceName:"cahan",facePath:"40_cahan.gif"},
+		{faceName:"koubi",facePath:"41_koubi.gif"},
+		{faceName:"guzhang",facePath:"42_guzhang.gif"},
+		{faceName:"qiuda",facePath:"43_qiuda.gif"},
+		{faceName:"huaixiao",facePath:"44_huaixiao.gif"},
+		{faceName:"zuoheng",facePath:"45_zuoheng.gif"},
+		{faceName:"youheng",facePath:"46_youheng.gif"},
+		{faceName:"haqian",facePath:"47_haqian.gif"},
+		{faceName:"bishi",facePath:"48_bishi.gif"},
+		{faceName:"weiqu",facePath:"49_weiqu.gif"},
+		{faceName:"kuaiku",facePath:"50_kuaiku.gif"},
+		{faceName:"yinxian",facePath:"51_yinxian.gif"},
+		{faceName:"qinqin",facePath:"52_qinqin.gif"},
+		{faceName:"xia",facePath:"53_xia.gif"},
+		{faceName:"kelian",facePath:"54_kelian.gif"},
+		{faceName:"caidao",facePath:"55_caidao.gif"},
+		{faceName:"xigua",facePath:"56_xigua.gif"},
+		{faceName:"piqiu",facePath:"57_piqiu.gif"},
+		{faceName:"lanqiu",facePath:"58_lanqiu.gif"},
+		{faceName:"pingpang",facePath:"59_pingpang.gif"},
+		{faceName:"yongbao",facePath:"78_yongbao.gif"},
+		{faceName:"woshou",facePath:"81_woshou.gif"},
+		{faceName:"deyidexiao",facePath:"deyidexiao.gif"},
+		{faceName:"tingyinyue",facePath:"tingyinyue.gif"}
+	]
+	,
+	Init:function(){
+		var isShowImg=false;
+		$(".Input_text").focusout(function(){
+			$(this).parent().css("border-color", "#cccccc");
+            $(this).parent().css("box-shadow", "none");
+            $(this).parent().css("-moz-box-shadow", "none");
+            $(this).parent().css("-webkit-box-shadow", "none");
+		});
+		$(".Input_text").focus(function(){
+		$(this).parent().css("border-color", "rgba(19,105,172,.75)");
+        $(this).parent().css("box-shadow", "0 0 3px rgba(19,105,192,.5)");
+        $(this).parent().css("-moz-box-shadow", "0 0 3px rgba(241,39,232,.5)");
+        $(this).parent().css("-webkit-box-shadow", "0 0 3px rgba(19,105,252,3)");
+		});
+		$(".imgBtn").click(function(){
+			if(isShowImg==false){
+				isShowImg=true;
+			    $(this).parent().prev().animate({marginTop:"-125px"},300);
+				if($(".faceDiv").children().length==0){
+					for(var i=0;i<ImgIputHandler.facePath.length;i++){
+						alert(ImgIputHandler.facePath[i].facePath);/*"+ImgIputHandler.facePath[i].facePath+"  */
+						$(".faceDiv").append("<img title='"+ImgIputHandler.facePath[i].faceName+"' src='face/"+ImgIputHandler.facePath[i].facePath+"' />");
+					}
+					$(".faceDiv>img").click(function(){
+						 
+				 		isShowImg=false;
+			            $(this).parent().animate({marginTop:"0px"},300);
+						ImgIputHandler.insertAtCursor($(".Input_text")[0],"["+$(this).attr("title")+"]");
+					});
+				}
+			}else{
+				isShowImg=false;
+			    $(this).parent().prev().animate({marginTop:"0px"},300);
+			}
+		});
+		$(".postBtn").click(function(){
+			alert($(".Input_text").val());
+		});
+	},
+	insertAtCursor:function(myField, myValue) {
+    if (document.selection) {
+        myField.focus();
+        sel = document.selection.createRange();
+        sel.text = myValue;
+        sel.select();
+    } else if (myField.selectionStart || myField.selectionStart == "0") {
+        var startPos = myField.selectionStart;
+        var endPos = myField.selectionEnd;
+        var restoreTop = myField.scrollTop;
+        myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+        if (restoreTop > 0) {
+            myField.scrollTop = restoreTop;
+        }
+        myField.focus();
+        myField.selectionStart = startPos + myValue.length;
+        myField.selectionEnd = startPos + myValue.length;
+    } else {
+        myField.value += myValue;
+        myField.focus();
+    }
+}
+}
+</script>
 
-<div id="server-num" align="center">idle010178007220.et2</div>
-
-<div id="J_Feedback4bug" data-version-id="20038"></div>
-   </div> </div></div>
-	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="js/show.js"></script>
-  </body></html>
+ 
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/show.js"></script>
+   
+   </body>
+   </html>
