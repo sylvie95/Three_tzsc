@@ -17,9 +17,9 @@ function GetQueryString(name)
 //alert(GetQueryString("smnao"));
 
 
-//sou1=GetQueryString("souA");
-//sou2=GetQueryString("souB");
-//sou3=decodeURI(GetQueryString("smname"));
+sou1=GetQueryString("souA");
+sou2=GetQueryString("souB");
+sou3=decodeURI(GetQueryString("smname"));
 
 function sou(sou1,sou2){
 	sou1=GetQueryString("souA");
@@ -41,7 +41,7 @@ function sou(sou1,sou2){
 		},"json");
 	},"json");
 }
-//sou(sou1,sou2);
+sou(sou1,sou2);
 
 function clickB(obj){
 	$(obj).attr("style","background:#2470d5;padding:5px;color:#FFF;");
@@ -53,9 +53,9 @@ function selectMenu(sou1,sou2,sou3){
 	$(".menuB"+sou2+"").attr("style","background:#2470d5;padding:5px;color:#FFF;");
 	$(".menuC"+sou3+"").attr("style","background:#2470d5;padding:5px;color:#FFF;");
 };
-//function menuAClick(){
-//	sou(sou1,sou2);
-//}
+function menuAClick(){
+	sou(sou1,sou2);
+}
 
 
 //模糊搜索

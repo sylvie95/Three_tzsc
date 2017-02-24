@@ -58,7 +58,7 @@ header{
 }
 
 .header1_1>ul>li>a:hover{
-	color:#2470d5;
+	color:#0000ff;
 }
 	
 
@@ -168,6 +168,11 @@ article>.article1_1{
 	background:#F4F4F4;
 }
 
+form{
+	width:100%;
+	height:100%;
+}
+
 .article3_ul{
 	width:100%;
 	height:100%;
@@ -208,7 +213,7 @@ article>.article1_1{
 .article3_ul>li:first-child{
 	width:100%;
 	height:38px;
-	border-top:1px solid #2470d5;
+	border-top:1px solid #8080ff;
 	background:#2470d5;
 	position:relative;
 }
@@ -245,7 +250,7 @@ article>.article1_1{
 }
 
 .article3_ul>li:nth-child(6)>input{
-	border:1px solid #69F;
+	border:1px solid #2470d5;
 	background:#2470d5;
 	font-size:12px;
 	color:#FFF;
@@ -254,7 +259,7 @@ article>.article1_1{
 }
 
 .article3_ul>li:nth-child(6)>input:hover{
-	background:#F90;
+	background:#8080ff;
 }
 
 .article3_ul>li:nth-child(7) a{

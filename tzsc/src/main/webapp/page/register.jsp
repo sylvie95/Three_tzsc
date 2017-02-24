@@ -5,6 +5,8 @@
 <base href="/tzsc/">
 <meta charset="utf-8">
 <title>注册</title>
+<link type="text/css" rel="stylesheet" href="easyui/themes/icon.css"/>
+<link type="text/css" rel="stylesheet" href="easyui/themes/default/easyui.css"/>
 <link type="text/css" rel="stylesheet" href="css/register.css">
 </head>
 
@@ -18,14 +20,14 @@
             <ul>
                 <li><a href="#">网站导航</a></li>
                 <li><a href="#">帮助中心</a></li>
-                <li><span></span><a href="#">个人应用</a>
+                <!-- <li><span></span><a href="#">个人应用</a>
                 	<ul class="hidden1">
                     	<li><a href="#">个人中心</a></li>
                         <li><a href="#">我的订单</a></li>
                         <li style="cursor:pointer">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</li>
                     </ul>
-                </li>
-                <li>HI~请[<a href="#">登录</a>]&nbsp;&nbsp;<a href="#" style="color:#FD843D">[免费注册]</a></li>
+                </li> -->
+                <li>HI~请[<a href="page/login.jsp">登录</a>]&nbsp;&nbsp;<a href="#" style="color:#FD843D">[免费注册]</a></li>
             </ul>
         </div>
     
@@ -40,18 +42,20 @@
 
 <article>
     <div class="article1_1">
+     <form id="loginForm" method="post">
     	<div class="article2_1">
-        	<ul>
-                <li><span>*</span>&nbsp;用&nbsp;户&nbsp;名：<input placeholder="请输入4~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>登录密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>确认密码：<input placeholder="请输入6~20位英文、数字组合" required="required"/></li>
-                <li><span>*</span>&nbsp;&nbsp;手&nbsp;&nbsp;机&nbsp;&nbsp;：<input placeholder="请输入11位手机号码" required="required"/></li>
-                <li><span>*</span>&nbsp;验&nbsp;证&nbsp;码：<input style="width:80px;" placeholder="请输入验证码" required="required"/><input style="margin-left:10px;width:70px;" type="button" value="获取验证码"/></li>
-                <li style="position:relative;"><input style="width:0px;margin:0px 10px 0px 25px;" type="checkbox"/><span style="position:absolute;color:#999999;font-size:12px;margin-top:2px;">我已阅读并同意该网站协议</span></li>
-                <li style="position:relative;"><input class="register" type="button" value="立即注册"/><span>已有账号？<a href="#">登录</a></span></li>
-            </ul>
+	        <ul>
+	           <li><span>*</span>&nbsp;用&nbsp;户&nbsp;名：<input name="username" id="username" placeholder="请输入4~20位英文、数字组合" required="required" onBlur="checkUname(this)"/></li>
+	           <li><span>*</span>登录密码：<input name="upassword" id="upassword" placeholder="请输入6~20位英文、数字组合" required="required"/></li>
+	           <li><span>*</span>确认密码：<input placeholder="请输入6~20位英文、数字组合" id="upassword1" required="required"/></li>
+	           <li><span>*</span>手机号码：<input name="uphone" id="uphone" placeholder="请输入11位手机号码" required="required"/></li>
+	           <li><span>*</span>&nbsp;验&nbsp;证&nbsp;码：<input style="width:80px;" id="yanzheng" placeholder="请输入验证码" required="required"/><input style="margin-left:10px;width:70px;"  type="button" id="getMsgBtn" onclick="getCaptcha()" value="获取验证码"/><input id="vaild" name="vaild" type="hidden"></li></li>
+	           <li style="position:relative;"><input style="width:0px;margin:0px 10px 0px 25px;" id="checkbox" type="checkbox"/><span style="position:absolute;color:#999999;font-size:12px;margin-top:2px;">我已阅读并同意该网站协议</span></li>
+	           <li style="position:relative;"><input style="disabled:true" class="register" id="btnLogin" type="button" value="立即注册"/><span>已有账号？<a href="page/login.jsp">登录</a></span></li>
+	        </ul>
             <img style="margin:90px 70px 0px 0px;float:right;" src="images/register1.png"/>
         </div>
+     </form>
     </div>
 </article>
 
@@ -106,7 +110,10 @@
     </div>
 </footer>
 
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
 	
-	<script type="text/javascript" src="js/register.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+//判断是否有用户登录
+
+
 //加载主分类的小分类
 function indexMenu(menu){
 	$.get("index/indexMenu?menu="+menu,function(data){
@@ -75,9 +78,9 @@ $.get("index/newShop",function(data){
 		}
 	}
 },"json");
-/*
+
 //加载首页的热门试用
-$.get("index/hotShop",function(data){
+/*$.get("index/hotShop",function(data){
 	for(var i=0;i<data.length;i++){
 		if(data[i].cpic.split(";")!=null){
 			$(".article1_3_1").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
@@ -94,8 +97,8 @@ $.get("index/hotShop",function(data){
 	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
 	            	'</form></div>');
 		}
-		
-/*$.get("tzsc/hot?SMmenu="+id,function(SMdata){
+	}
+$.get("tzsc/hot?SMmenu="+id,function(SMdata){
 	for(var z=0;z<SMdata.length;z++){
 		$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='#'>"+SMdata[z].smname+"</a></dd>");
 	}

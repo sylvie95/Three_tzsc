@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <title>主页</title>
 <link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript">
+</script>
 </head>
 
 <body>
@@ -18,14 +20,32 @@
 				<ul>
 					<li><a href="#">网站导航</a></li>
 					<li><a href="#">帮助中心</a></li>
-					<li><span></span><a href="#">个人应用</a>
-						<ul class="hidden1">
-							<li><a href="#">个人中心</a></li>
-							<li><a href="#">我的订单</a></li>
-							<li style="cursor: pointer">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</li>
-						</ul></li>
-					<li>HI~请[<a href="#">登录</a>]&nbsp;&nbsp;<a href="#"
-						style="color: #FD843D">[免费注册]</a></li>
+					<%
+					Object name = null;
+					if((name = session.getAttribute("loginUserName")) == null){
+						%>
+						<!-- <li><span></span><a href="#">个人应用</a>
+		                	<ul class="hidden1">
+		                    	<li><a href="#">个人中心</a></li>
+		                        <li><a href="#">我的订单</a></li>
+		                        <li style="cursor:pointer">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</li>
+		                    </ul>
+		                </li> -->
+						<li class="userManage">HI~请[<a href="page/login.jsp">登录</a>]&nbsp;&nbsp;<a href="page/register.jsp"
+								style="color: #FD843D">[免费注册]</a></li>
+						<%
+					}else{
+						%>
+						<li style="width:80px; text-align: center;"><span></span><a style="color:#F63;" href="#"><%=name %></a>
+		                	<ul class="hidden1">
+		                    	<li><a href="page/xinxi.jsp">个人中心</a></li>
+		                        <li><a href="#">我的订单</a></li>
+		                        <li style="cursor:pointer">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</li>
+		                    </ul>
+		                </li>
+						<%
+					}
+				%>
 				</ul>
 			</div>
 

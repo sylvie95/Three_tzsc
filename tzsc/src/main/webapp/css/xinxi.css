@@ -27,7 +27,7 @@ article{
 }
 
 .ul1_1>li a:hover{
-	color:#F60;
+	color:#2470d5;
 }
 
 .ul1_1>li:first-child{
@@ -77,6 +77,14 @@ article{
 	background:#F4F4F4;
 }
 
+.form1{
+	display:block;
+}
+
+.form2{
+	display:none;
+}
+
 .userPic>img{
 	width:70px;
 	height:70px;
@@ -99,7 +107,7 @@ article{
 }
 
 .userPic>span a:hover{
-	color:#F60;
+	color:#2470d5;
 }
 
 .userMenu{
@@ -121,7 +129,7 @@ article{
 }
 
 .userMenu li a:hover{
-	color:#F60;
+	color:#2470d5;
 }
 
 .userMenu li:first-child{
@@ -134,9 +142,14 @@ article{
 }
 
 /***灰色****/
-.huise{
+.huise1{
 	background:#CCCCCC;
 }
+
+.huise2{
+	background:#CCCCCC;
+}
+
 
 
 
@@ -176,14 +189,14 @@ article{
 	width:60px;
 	height:25px;
 	background:#2470d5;
-	border:1px solid #69F;
+	border:1px solid #2470d5;
 	color:#FFF;
 	margin-top:20px;
 	cursor:pointer;
 }
 
 .article1_2_2 li:last-child input:hover{
-	background:#69F;
+	background:#2470d5;
 }
 
 .article1_2_2 input{
@@ -269,7 +282,7 @@ header{
 }
 
 .header1_1>ul>li>a:hover{
-	color:#2470d5;
+	color:#FD8946;
 }
 	
 
