@@ -22,7 +22,7 @@ li{
 header{
 	width:100%;
 	height:105px;
-	border-bottom:1px solid #ff6600;
+	border-bottom:1px solid #2470d5;
 }
 
 /*<!-- 头部：上部分 -->*/
@@ -58,7 +58,7 @@ header{
 }
 
 .header1_1>ul>li>a:hover{
-	color:#FD8946;
+	color:#0000ff;
 }
 	
 
@@ -136,7 +136,7 @@ header{
 article{
 	width:100%;
 	height:433px;
-	border-top:1px solid #FFB889;
+	border-top:1px solid #2470d5;
 	border-bottom:1px solid #E0E0E2;
 }
 
@@ -166,6 +166,11 @@ article>.article1_1{
 	width:45%;
 	height:308px;	
 	background:#F4F4F4;
+}
+
+form{
+	width:100%;
+	height:100%;
 }
 
 .article3_ul{
@@ -208,8 +213,8 @@ article>.article1_1{
 .article3_ul>li:first-child{
 	width:100%;
 	height:38px;
-	border-top:1px solid #FFD8BE;
-	background:#FF6600;
+	border-top:1px solid #8080ff;
+	background:#2470d5;
 	position:relative;
 }
 
@@ -245,8 +250,8 @@ article>.article1_1{
 }
 
 .article3_ul>li:nth-child(6)>input{
-	border:1px solid #FC914C;
-	background:#FF6600;
+	border:1px solid #2470d5;
+	background:#2470d5;
 	font-size:12px;
 	color:#FFF;
 	font-weight:bold;
@@ -254,7 +259,7 @@ article>.article1_1{
 }
 
 .article3_ul>li:nth-child(6)>input:hover{
-	background:#F90;
+	background:#8080ff;
 }
 
 .article3_ul>li:nth-child(7) a{

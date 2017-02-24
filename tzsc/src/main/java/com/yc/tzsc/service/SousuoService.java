@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.yc.tzsc.entity.Commodity;
 import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.entity.PaginationBean;
 
 public interface SousuoService {
 
@@ -12,7 +13,9 @@ public interface SousuoService {
 	List<Commodity> menuNo(int menuNo);
 
 	List<Commodity> sousuoStr(Commodity commodity);
-
+	
 	MinType selectMinTypeName(int strNo);
+
+	PaginationBean<Commodity> listPartSousuo(String currPage, String pageSize);
 
 }

@@ -16,11 +16,11 @@
 	</select>
 	
 	<select id="newShop" resultType="Commodity">
-		select * from (select * from t_commodity order by cdate DESC) where rownum &lt; 5
+		select * from (select * from t_commodity order by cdate DESC) where rownum &lt; 9
 	</select>
 	
 	<select id="hotShop" resultType="Commodity">
-		select * from t_commodity inner join (select * from t_num order by nnum DESC) t_num on t_commodity.cid = t_num.cid where rownum &lt; 5
+		select * from t_commodity inner join (select * from t_num order by nnum DESC) t_num on t_commodity.cid = t_num.cid where rownum &lt; 9
 	</select>
 	
 </mapper>

@@ -3,8 +3,31 @@
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.tzsc.mapper.SousuoMapper">
+
+	<!-- 定义sql变量 -->
+	<sql id="selectCommodity">
+		select * from t_commodity
+	</sql>
+	
 	<select id="menuNo" resultType="MinType" parameterType="int">
 		select * from t_mintype where tid = #{menuNo}
+	</select>
+	
+	<!-- 使用嵌套查询到的方式处理分页 -->
+	<resultMap type="PaginationBean" id="paginationBeanMap">
+		<id property="currPage" column="currPage"/>
+		<result property="pageSize" column="pageSize"/>
+		<collection property="rows" column="{pageSize=pageSize, currPage=currPage}" ofType="Commodity" select="getSousuo"/>
+	</resultMap>
+	
+	<select id="listPartSousuo" parameterType="PaginationBean" resultMap="paginationBeanMap">
+		select count(1) total, ceil(count(1) / ${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage from t_commodity
+	</select>
+	
+	<select id="getSousuo" resultType="Commodity">
+		select * from
+		(select m.*,rownum rn from
+		(<include refid="selectCommodity"/> order by 1 desc) m where  ${currPage} * ${pageSize} >= rownum) where rn > (${currPage}-1) * ${pageSize}
 	</select>
 	
 	<!-- 根据id查询名称 -->
@@ -13,6 +36,7 @@
 	</select>
 	
 	<select id="sousuoStr" parameterType="Commodity" resultType="Commodity">
+	
 		select * from t_commodity where cname like '%${cmessage}%' or cname like '%${cadminname}%'
 	</select>
 </mapper>

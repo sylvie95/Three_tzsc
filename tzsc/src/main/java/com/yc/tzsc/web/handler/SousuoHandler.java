@@ -3,7 +3,6 @@ package com.yc.tzsc.web.handler;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.tzsc.entity.Commodity;
 import com.yc.tzsc.entity.MinType;
+import com.yc.tzsc.entity.PaginationBean;
 import com.yc.tzsc.service.SousuoService;
 
 @Controller
@@ -50,13 +50,18 @@ public class SousuoHandler {
 		Commodity commodity = new Commodity();
 		//将关键词存入
 		commodity.setCmessage(URLDecoder.decode(strName , "utf-8"));
-//		commodity.setCmessage(URLEncoder.encode(strName,"utf-8"));
-//		commodity.setCmessage(strName);
 		commodity.setCadminname(listMinType.getMname());
 		List<Commodity> sousuoStr = sousuoService.sousuoStr(commodity);
-//		System.out.println(sousuoStr + "========" + commodity.getCadminname());
 		return sousuoStr;
 		
+	}
+	
+	@RequestMapping("/list")
+	@ResponseBody
+	public PaginationBean<Commodity> listPartSousuo(@RequestParam("page") String currPage, @RequestParam("rows")String pageSize){
+		System.out.println(currPage + "=========" + pageSize);
+		LogManager.getLogger().debug("请求listPartSousuo处理listPartUsers...");
+		return  sousuoService.listPartSousuo(currPage, pageSize);
 	}
 	
 	
