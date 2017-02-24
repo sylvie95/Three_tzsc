@@ -79,86 +79,7 @@ $.get("index/newShop",function(data){
 	}
 },"json");
 
-//加载首页的热门试用
-/*$.get("index/hotShop",function(data){
-	for(var i=0;i<data.length;i++){
-		if(data[i].cpic.split(";")!=null){
-			$(".article1_3_1").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
-            	'<form>'+
-            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic.split(";")[0]+'"/>'+
-            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
-            	'</form></div>');
-		}else{
-			$(".article1_3_1").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
-	            	'<form>'+
-	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic+'"/>'+
-	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<input class="_canyu" style="" type="button" value="立即参与"/></div>'+
-	            	'</form></div>');
-		}
-	}
-$.get("tzsc/hot?SMmenu="+id,function(SMdata){
-	for(var z=0;z<SMdata.length;z++){
-		$("#ssm"+id+"").append("<dd name="+SMdata[z].mid+"><a href='#'>"+SMdata[z].smname+"</a></dd>");
-	}
-},"json");*/
-
-
-//加载首页的最新发布
-/*$.get("index/newShop",function(data){
-	for(var i=0;i<data.length;i++){
-//		alert(data[i].cpic.split(";")[0]);
-//		alert(data[i].cid);
-		if(data[i].cpic.split(";")!=null){
-			$(".article1_3_2").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
-	            	'<form>'+
-	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic.split(";")[0]+'"/>'+
-	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<a href="show/showDetail?cid='+data[i].cid+'"><input class="_canyu" style="" type="button" value="立即参与"/></a></div>'+
-	            	'<input type="hidden" value='+data[i].cid+'/></form></div>');
-			
-//			$(".article1_3_2").append("<li><a href='tzsc/show?cid="+data[i].cid+"'></li>");	
-		}else{
-			$(".article1_3_2").append('<div style="width:230px;height:230px; margin:20px 10px 0px;float:left;border:1px solid #F60;">'+
-	            	'<form>'+
-	            	'<img style="width:100%;height:155px;" src="upload/'+data[i].cpic+'"/>'+
-	            	'<p style="height:45px;margin-left:10px;font-size:14px;color:#F60;overflow: hidden;">'+data[i].cdescribe+'</p>'+
-	            	'<div style="font-size:11px;"><span style="margin-left:10px;color:#999999;">66</span>人查看<a href="show/showDetail?cid='+data[i].cid+'"><input class="_canyu" style="" type="button" value="立即参与"/></div>'+
-	            	'</form></div>');
-		}
-		
-	}
-},"json");
-*/
 //加载首页的热门交易
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -167,8 +88,6 @@ $.get("tzsc/hot?SMmenu="+id,function(SMdata){
 var total=5;
 var index=2;//当前图片编号
 //
-
-
 
 /*//定义函数: function 函数名(形参列表){//函数体}
 function changePic(){
