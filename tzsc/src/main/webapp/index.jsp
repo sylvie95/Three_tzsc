@@ -53,9 +53,9 @@
 
 		<div class="header2">
 			<div class="header2_1">
-				<img />
+				<a href="index.jsp"><img src="images/logo.png"/></a>
 				<p>
-					<input placeholder="请输入关键词..." /><a href="#">搜索</a>
+					<input id="findVal" placeholder="请输入关键词..." /><a onclick="find()" href="javascript:void(0)">搜索</a>
 				</p>
 			</div>
 		</div>
@@ -117,7 +117,19 @@
 						</li>
 					</ul></li>
 				<li><a href="#">首页</a></li>
-				<li><a href="#">公益捐赠</a></li>
+				<%
+					name = null;
+					if((name = session.getAttribute("loginUserName")) == null){
+						%>
+						<li><a href="page/login.jsp">我要出售</a></li>
+				
+						<%
+					}else{
+						%>
+						<li><a href="page/fabu.jsp">我要出售</a></li>
+						<%
+					}
+				%>
 			</ul>
 
 			<!-- 隐藏块 -->
@@ -226,30 +238,6 @@
                     </dd>
                 </dl>
                </div> -->
-        	<div class="article1_3_3_div1">
-        		<div>物品求购</div>
-            	<div>
-                	<ul>
-                	<li><a href="#"><span>《求购》发布求购真的假的啊</span><span>2017-2-18</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-18</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-18</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-18</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-18</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-18</span></a></li>
-                </ul>
-                <ul>
-                	<li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                    <li><a href="#"><span>《求购》发布求购信息</span><span>2017-2-10</span></a></li>
-                </ul>
-                </div>
-            </div>
-            <div class="article1_3_3_div2">
-            
-            </div>
             
         </div>
 

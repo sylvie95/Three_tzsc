@@ -283,9 +283,9 @@ article{
 
 .form3 ul li:nth-child(5)>ul>li #addImg{
 	display:inline-block;
-	width:150px;
-	height:150px;
-	background:url(../images/2017-02-19_001016.png) no-repeat;
+	width:100px;
+	height:100px;
+	background:url(../images/2017-02-19_001016.png) 45% 45%;
 }
 
 #fabuBtn{
@@ -300,7 +300,7 @@ article{
 }
 
 #fabuBtn:hover{
-	background:#F63;
+	background:#0000ff;
 }
 
 

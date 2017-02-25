@@ -51,7 +51,7 @@
     
     <div class="header2">
     	<div class="header2_1">
-        	<img/>
+        	<a href="index.jsp"><img src="images/logo.png"/></a>
             <p><input placeholder="请输入关键词..."/><a href="#">搜索</a></p>
         </div>
     </div>

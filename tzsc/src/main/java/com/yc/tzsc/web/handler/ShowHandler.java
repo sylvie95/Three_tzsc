@@ -21,12 +21,13 @@ public class ShowHandler {
 	 
 	
 	@RequestMapping("/showDetail")
-	public String getCommodityById(@RequestParam("cid")int id, HttpSession session){
+	@ResponseBody
+	public Commodity getCommodityById(@RequestParam("cid")int id, HttpSession session){
 		LogManager.getLogger().debug("请求showDetail处理");
 		Commodity commodity = showService.getCommodityById(id);
 		System.out.println(commodity);
 		session.setAttribute("commodity", commodity);
-   		return "forward:/show.jsp";
+   		return commodity;
  	}
 	
 	 

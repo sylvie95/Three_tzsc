@@ -18,4 +18,6 @@ public interface SousuoMapper {
 
 	List<Commodity> sousuoStr(Commodity commodity);
 
+	List<Commodity> find(String param);
+
 }

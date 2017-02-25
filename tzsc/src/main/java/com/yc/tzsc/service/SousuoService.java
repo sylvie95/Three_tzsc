@@ -18,4 +18,6 @@ public interface SousuoService {
 
 	PaginationBean<Commodity> listPartSousuo(String currPage, String pageSize);
 
+	List<Commodity> find(String param);
+
 }

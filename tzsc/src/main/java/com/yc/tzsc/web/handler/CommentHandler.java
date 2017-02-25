@@ -1,20 +1,12 @@
 package com.yc.tzsc.web.handler;
 
 
-import javax.servlet.http.HttpSession;
-
-import org.apache.logging.log4j.LogManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.yc.tzsc.entity.Commodity;
-import com.yc.tzsc.service.ShowService;
    
 @Controller
-@RequestMapping("/comment")
+//@RequestMapping("/comment")
 public class CommentHandler {
 //	@Autowired
 //	private CommentService commentService;

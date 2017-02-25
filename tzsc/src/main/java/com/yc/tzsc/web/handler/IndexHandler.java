@@ -25,7 +25,7 @@ public class IndexHandler {
 	@RequestMapping("/indexMenu")
 	@ResponseBody
 	public List<MinType> indexMenu(@RequestParam("menu")int menu, HttpSession session){
-		LogManager.getLogger().debug("请求indexMenu处理加载首页主分类功能...");
+//		LogManager.getLogger().debug("请求indexMenu处理加载首页主分类功能...");
 		List<MinType> listNew = null;
 		if(menu==0){
 			listNew = indedxService.listMenu();
@@ -40,7 +40,7 @@ public class IndexHandler {
 	@RequestMapping("/indexMinMenu")
 	@ResponseBody
 	public List<SMixType> indexMinMenu(@RequestParam("SMmenu")int SMmenu, HttpSession session){
-		LogManager.getLogger().debug("请求indexMinMenu处理加载首页小分类功能...");
+//		LogManager.getLogger().debug("请求indexMinMenu处理加载首页小分类功能...");
 		List<SMixType> listMinNew = indedxService.listMinMenu(SMmenu);
 //		System.out.println(listMinNew);
 		return listMinNew;
@@ -50,9 +50,9 @@ public class IndexHandler {
 	@RequestMapping("/hotShop")
 	@ResponseBody
 	public List<Commodity> hotShop(HttpSession session){
-		LogManager.getLogger().debug("请求hotShop处理加载首页小分类功能...");
+//		LogManager.getLogger().debug("请求hotShop处理加载首页小分类功能...");
 		List<Commodity> hotShop = indedxService.hotShop();
-		System.out.println(hotShop);
+//		System.out.println(hotShop);
 		return hotShop;
 	}
 	
@@ -60,9 +60,9 @@ public class IndexHandler {
 	@RequestMapping("/newShop")
 	@ResponseBody
 	public List<Commodity> newShop(HttpSession session){
-		LogManager.getLogger().debug("请求newShop处理加载首页小分类功能...");
+//		LogManager.getLogger().debug("请求newShop处理加载首页小分类功能...");
 		List<Commodity> newShop = indedxService.newShop();
-		System.out.println(newShop);
+//		System.out.println(newShop);
 		return newShop;
 	}
 }

@@ -57,6 +57,12 @@ function menuAClick(){
 	sou(sou1,sou2);
 }
 
+//模糊搜索
+function findStr(){
+	$.get("sousuo/find?param="+strFind,function(data){
+		alert(data);
+	},"json");
+}
 
 //模糊搜索
 function selectList(num,str){
@@ -75,12 +81,22 @@ function getProducts(pageNum) {
 		var product = data.rows;
 //		alert(product);
 		for (var i = 0; i < product.length; i++) {
-			$(".article1_3_ul").append('<li>'+
-                	'<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">'+
-                	'<img style="vertical-align:middle;overflow:hidden;height:160px;" src="upload/TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg"/>'+
-                	'<p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">'+product[i].cname+'</p>'+
-                	'<div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>'+
-                	'</div></li>');
+			if(product[i].cpic.split(";")!=null){
+				$(".article1_3_ul").append('<li style="text-align: center;"><a href="page/show.jsp?nidParam='+product[i].cid+'">'+
+	                	'<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">'+
+	                	'<img style="vertical-align:middle;overflow:hidden;width:100%;height:70%;" src="upload/'+product[i].cpic.split(";")[0]+'"/>'+
+	                	'<p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">'+product[i].cname+'</p>'+
+	                	'<div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>'+
+	                	'</div></a></li>');
+			}else{
+				$(".article1_3_ul").append('<li>'+
+	                	'<div style="text-align: center;width:width:100%;height:100%; margin:0px;float:left;border-left:none !important;border:1px solid #CCCCCC;">'+
+	                	'<img style="vertical-align:middle;overflow:hidden;width:100%;height:60%;" src="upload/'+product[i].cpic+'"/>'+
+	                	'<p style="height:47px;margin-left:10px;margin-top:5px;font-size:11.5px;color:#666666;">'+product[i].cname+'</p>'+
+	                	'<div style="font-size:11px;"><span style="float:left;margin-left:10px;color:#999999;">66人查看</span></div>'+
+	                	'</div></li>');
+			}
+			
 		}
 		$(".article1_4").empty();
 		$(".article1_4").append("当前页数:["+ data.currPage+ "/"+ data.totalPage+ "]&nbsp;&nbsp; "

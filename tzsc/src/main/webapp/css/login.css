@@ -1,3 +1,4 @@
+/*********************************************头部信息******************************************************/
 *{
 	margin:0px auto;
 	padding:0px;
@@ -21,19 +22,19 @@ li{
 /*<!-- 头部整体 -->*/
 header{
 	width:100%;
-	height:105px;
-	border-bottom:1px solid #2470d5;
+	height:110px;
 }
 
 /*<!-- 头部：上部分 -->*/
 .header1{
 	width:100%;
 	height:25px;
-	background:#F4F4F4;
+	background:#F0F0F0;
+	border-bottom:1px solid #CCCCCC;
 }
 
 .header1_1{
-	width:70%;
+	width:75%;
 	height:100%;
 }
 
@@ -58,7 +59,7 @@ header{
 }
 
 .header1_1>ul>li>a:hover{
-	color:#0000ff;
+	color:#FD8946;
 }
 	
 
@@ -119,18 +120,38 @@ header{
 	height:80px;
 }
 
-.header2>div{
+.header2>.header2_1{
 	width:70%;
 	height:100%;
 }
 
-.header2>div>img{
+.header2>.header2_1>img{
 	display:inline-block;
 	width:30%;
 	height:100%;
 	background:#CCCCCC;
 	margin-left:10px;
 }
+
+/***************************************头部搜索部分***********************************************/
+.header2>.header2_1 p{
+	display:inline-block;
+	float:right;
+	margin:30px 50px 0px 0px;
+	background:#2470d5;
+}
+.header2>.header2_1 input{
+	border:2px solid #2470d5;/* #2470d5 */
+	width:250px;
+	height:30px;
+}
+
+.header2>.header2_1 p a{
+	color:#FFF;
+	font-size:14px;
+	padding:0px 10px 0px;
+}
+
 /*******************************************************************************************************/
 /*<!-- 中间主体部分 -->*/
 article{

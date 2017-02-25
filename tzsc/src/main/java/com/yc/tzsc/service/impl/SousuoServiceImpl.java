@@ -54,4 +54,10 @@ public class SousuoServiceImpl implements SousuoService {
 		return sousuoMapper.sousuoStr(commodity);
 	}
 
+	@Override
+	public List<Commodity> find(String param) {
+		
+		return sousuoMapper.find(param);
+	}
+
 }

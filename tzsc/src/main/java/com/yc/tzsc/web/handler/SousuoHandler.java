@@ -28,7 +28,7 @@ public class SousuoHandler {
 	
 	@RequestMapping("/souMenu")
 	public String souMenu(@RequestParam("smname")String menuName, HttpSession session){
-		LogManager.getLogger().debug("请求souMenu处理加载首页主分类功能...");
+//		LogManager.getLogger().debug("请求souMenu处理加载首页主分类功能...");
 		return "forward:/page/detail.jsp";
 	}
 	
@@ -36,7 +36,7 @@ public class SousuoHandler {
 	@RequestMapping("/select")
 	@ResponseBody
 	public List<Commodity> menuNo(@RequestParam("where")String menuNo, HttpSession session){
-		LogManager.getLogger().debug("请求menuNo处理加载首页主分类功能...");
+//		LogManager.getLogger().debug("请求menuNo处理加载首页主分类功能...");
 		List<Commodity> souMenu = sousuoService.menuNo(Integer.parseInt(menuNo));
 		return souMenu;
 	}
@@ -45,7 +45,7 @@ public class SousuoHandler {
 	@RequestMapping("/sousuoStr")
 	@ResponseBody
 	public List<Commodity> sousuoStr(@RequestParam("strNo")int strNo,@RequestParam("strName")String strName, HttpSession session) throws UnsupportedEncodingException{
-		LogManager.getLogger().debug("请求sousuoStr处理加载首页主分类功能...");
+//		LogManager.getLogger().debug("请求sousuoStr处理加载首页主分类功能...");
 		MinType listMinType = sousuoService.selectMinTypeName(strNo);
 		Commodity commodity = new Commodity();
 		//将关键词存入
@@ -59,9 +59,18 @@ public class SousuoHandler {
 	@RequestMapping("/list")
 	@ResponseBody
 	public PaginationBean<Commodity> listPartSousuo(@RequestParam("page") String currPage, @RequestParam("rows")String pageSize){
-		System.out.println(currPage + "=========" + pageSize);
-		LogManager.getLogger().debug("请求listPartSousuo处理listPartUsers...");
+//		System.out.println(currPage + "=========" + pageSize);
+//		LogManager.getLogger().debug("请求listPartSousuo处理listPartUsers...");
 		return  sousuoService.listPartSousuo(currPage, pageSize);
+	}
+	
+	@RequestMapping("/find")
+	@ResponseBody
+	public List<Commodity> find(@RequestParam("paramMenu") String param) throws UnsupportedEncodingException{
+//		System.out.println(URLDecoder.decode(param , "utf-8"));
+//		LogManager.getLogger().debug("请求SousuoHandler处理find...");
+		List<Commodity> findList = sousuoService.find("%"+URLDecoder.decode(param , "utf-8")+"%");
+		return findList;
 	}
 	
 	

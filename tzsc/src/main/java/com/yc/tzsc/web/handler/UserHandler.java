@@ -32,7 +32,7 @@ public class UserHandler {
 	@RequestMapping("/login")
 	@ResponseBody
 	public boolean login(User user,HttpSession session,HttpServletRequest request, HttpServletResponse response) {
-		LogManager.getLogger().debug("请求UserHandler处理login....");
+//		LogManager.getLogger().debug("请求UserHandler处理login....");
 		
 		user = userService.login(user);
 		session.setAttribute("loginUserName", user.getUsername());  //往session裡面存
@@ -44,11 +44,11 @@ public class UserHandler {
         //密码
         String upassword = user1.getUpassword();
         
-        System.out.println(username+"14523698522");
+//        System.out.println(username+"14523698522");
         //记住用户名、密码功能(注意：cookie存放密码会存在安全隐患)
         String remFlag = request.getParameter("remFlag");
         
-        System.out.println(remFlag+"14523698522");
+//        System.out.println(remFlag+"14523698522");
         if("1".equals(remFlag)){ //"1"表示用户勾选记住密码
             String loginInfo = username+","+upassword;
             Cookie userCookie=new Cookie("loginInfo",loginInfo); 
@@ -64,10 +64,11 @@ public class UserHandler {
 	@RequestMapping("/register")
 	@ResponseBody
 	public boolean register(User user,HttpSession session) {
-		LogManager.getLogger().debug("请求UserHandler处理register....");
+//		LogManager.getLogger().debug("请求UserHandler处理register....");
 		
 	//	boolean result = true;
 		boolean result = userService.register(user);
+		session.setAttribute("loginUserName", user.getUsername());
 		session.setAttribute("registerUser", result);
 		return result;  
 	}
@@ -76,11 +77,11 @@ public class UserHandler {
 	@RequestMapping("/xinxi")
 	@ResponseBody
 	public User detal(HttpSession session) {
-		LogManager.getLogger().debug("请求UserHandler处理detal....");
-		User user = (User) session.getAttribute("loginUser");
-//		user = userService.detal(user.getUsername());
+//		LogManager.getLogger().debug("请求UserHandler处理detal....");
+		User user = new User();
+		String userName = (String) session.getAttribute("loginUserName");
+		user.setUsername(userName);
 		user = userService.detal(user);
-		System.out.println(user);
 		return user; 
 	}
 	
@@ -88,7 +89,7 @@ public class UserHandler {
 	@RequestMapping("/modify1")
 	@ResponseBody
 	public boolean modifyUser(@RequestParam(name="picData",required=false)MultipartFile picData ,User user){
-		LogManager.getLogger().debug("请求UserHandler处理modifyUser....请求参数user"+user);
+//		LogManager.getLogger().debug("请求UserHandler处理modifyUser....请求参数user"+user);
 //		picData=user.getUlogo() ;
 		if(picData != null && !picData.isEmpty()){
 			try {
@@ -105,12 +106,12 @@ public class UserHandler {
 		@RequestMapping("/modify2")
 		@ResponseBody
 		public boolean modifyPassword(User user,HttpSession session){
-			LogManager.getLogger().debug("请求UserHandler处理modifyUser....请求参数user"+user);
+//			LogManager.getLogger().debug("请求UserHandler处理modifyUser....请求参数user"+user);
 			
 			User user1 = (User) session.getAttribute("loginUser");
 			String username  = user1.getUsername();
 			user.setUsername(username);
-			System.out.println(user);
+//			System.out.println(user);
 			return userService.modifyPassword(user);
 		}
 		

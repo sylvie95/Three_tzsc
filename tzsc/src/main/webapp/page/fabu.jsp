@@ -51,7 +51,7 @@
     <!-- logo与搜索部分 -->
     <div class="header2">
     	<div class="header2_1">
-        	<img/>
+        	<a href="index.jsp"><img src="images/logo.png"/></a>
             <!--<p><input placeholder="请输入关键词..."/><a href="#">搜索</a></p>-->
         </div>
     </div>
@@ -80,42 +80,23 @@
                     <ul class="ul2_1">
                         <li>功能中心</li>
                         <li class="huise"><a href="#">我要发布</a></li>
-                        <li ><a href="#">我要求购</a></li>
+                        <!-- <li ><a href="#">我要求购</a></li>
                         <li ><a href="#">我的发布</a></li>
-                        <li ><a href="#">我的求购</a></li>
+                        <li ><a href="#">我的求购</a></li> -->
                     </ul>
                 </div>
             </div>
             <!-- 右侧部分： 详细信息 -->
             <div class="article1_2_2">
                 <span>我要发布</span>
-                <form style="display:none">
-                    <ul>
-                        <li>用&nbsp;户&nbsp;&nbsp;名：<input/></li>
-                        <li>手机号码：<input/></li>
-                        <li>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input/></li>
-                        <li>Q&nbsp;Q号码：<input/></li>
-                        <li>电子邮箱：<input/></li>
-                        <li>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：<input/></li>
-                        <li>个人简介：<textarea></textarea></li>
-                        <li><input type="button" value="保存"/></li>
-                    </ul>
-                </form>
-                <form style="display:none">
-                    <ul>
-                        <li>原&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
-                        <li>新&nbsp;密&nbsp;&nbsp;码：<input type="password"/></li>
-                        <li>确认密码：<input type="password"/></li>
-                        <li><input type="button" value="保存"/></li>
-                    </ul>
-                </form>
-                <form class="form3">
-                    <ul>
-                        <li><label>标题</label><input/></li>
-                        <li><label>类型</label><select><option>你好</option></select><select><option>你好</option></select></li>
-                        <li><label>描述</label><textarea></textarea></li>
-                        <li><label>价格</label><input/></li>
-                        <li>
+                <form class="form3" id="fabuForm">
+                    <ul style="text-align: left;">
+                        <li><label>标题</label><input name="cname"/></li>
+                        <li><label>类型</label><select name="ctname"><option></option></select></li>
+                        <li><label>描述</label><textarea name="cdescribe"></textarea></li>
+                        <li><label>价格</label><input name="cprice"/></li>
+                        <li >
+                        	<input type="hidden" name="cpic"/>
                             <ul class="imgul">
                                 <li><img class="img0"/></li>
                                 <li><img class="img1"/></li>
@@ -126,8 +107,8 @@
                                 <li><input id="addPic" type="file" onchange="chgPic(this)" style="visibility:hidden"/></li>
                             </ul>
                         </li>
-                        <li><label>联系电话</label><input/></li>
-                        <li><label>QQ</label><input/></li>
+                        <li><label>联系电话</label><input name="cphone"/></li>
+                        <li><label>QQ</label><input name="cqq"/></li>
                         <li><input id="fabuBtn" type="button" value="发布"/></li>
                     </ul>
        			</form>
@@ -215,7 +196,9 @@
     </div>
 </footer>
 
-	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>	
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
 	<script type="text/javascript" src="js/fabu.js"></script>
 </body>
 </html>

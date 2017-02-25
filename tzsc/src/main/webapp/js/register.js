@@ -62,9 +62,9 @@ $("#yanzheng").blur(function(){
     var inputvaild = $('#yanzheng').val();
     var vaild = $('#vaild').val();
     if (inputvaild != "" && inputvaild == vaild) {
-   	 alert("验证码正确,")
+   	 /*alert("验证码正确,")*/
     } else {
-   	 alert("验证码输入不正确,")
+   	/* alert("验证码输入不正确,")*/
     }
 })
 

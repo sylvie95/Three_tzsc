@@ -13,6 +13,10 @@
 		select * from t_mintype where tid = #{menuNo}
 	</select>
 	
+	<select id="find" resultType="Commodity" parameterType="String">
+		select * from t_commodity where cname like #{param} or cdescribe like #{param}
+	</select>
+	
 	<!-- 使用嵌套查询到的方式处理分页 -->
 	<resultMap type="PaginationBean" id="paginationBeanMap">
 		<id property="currPage" column="currPage"/>

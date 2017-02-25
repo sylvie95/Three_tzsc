@@ -32,9 +32,10 @@
         </div>
     </div>
     
-    <div class="header2">
-    	<div>
-        	<a href="index.jsp"><img/></a>
+   <div class="header2">
+    	<div class="header2_1">
+        	<a href="index.jsp"><img src="images/logo.png"/></a>
+            <!--<p><input placeholder="请输入关键词..."/><a href="#">搜索</a></p>-->
         </div>
     </div>
 </header>
