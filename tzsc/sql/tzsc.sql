@@ -57,6 +57,8 @@ create table t_admin(
 
 select * from T_COMMODITY where cid = 48;
 
+select * from comments where comcid = 48;
+
 select cusername,cdate,cprice,cpic,caddress from T_COMMODITY where cid = 49;
 
 create sequence seq_t_admin increment by 1 start with 1;
@@ -172,6 +174,7 @@ insert into t_smin values(seq_t_smin.nextval,23,'壁灯');
 
 select * from t_smin;
 
+	select * from comments where comcid = 48;
  
 select * from (select * from t_commodity order by  cdate DESC ) where rownum<5;
 
@@ -205,6 +208,8 @@ insert into t_commodity values(seq_t_commodity.nextval,'Sony/索尼 DSC-W310数�
 ','TB1dWFnKFXXXXXAXXXXtUp08pXX_728x728.jpg;TB282YFqVXXXXXeXXXXXXXXXXXX_!!0-fleamarket.jpg_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 insert into t_commodity values(seq_t_commodity.nextval,'hp扫描仪','电脑','9成新，用不着了，没毛病，占地方需要的拿去','TB13pCCLpXXXXb_XVXX2WCJ.VXX_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 insert into t_commodity values(seq_t_commodity.nextval,'【1212品牌盛典】【苏宁易购】lenovo/联想天','电脑','感兴趣的话给我留言吧！','TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
+
+insert into t_commodity values(seq_t_commodity.nextval,'【苏宁易购】lenovo/联想天','电脑','感兴趣的话给我留言吧！','TB1WLyjNVXXXXclXXXXGYteFXXX_728x728.jpg;15341797ae04551591.jpg;banner3.jpg;banner1.jpg;banner2.jpg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
 
 
 insert into t_commodity values(seq_t_commodity.nextval,'闲置手机','闲置数码','无','images/pic.jsg',2000,'LSY','海南','15386003052',2,'1451932421',sysdate,1,2,'无','admin');
@@ -260,8 +265,12 @@ create table comments(
 select * from comments;
 create sequence seq_comments increment by 1 start with 1;
 
-insert into comments values(seq_comments.nextval, 49,'这个可小刀吗','zmy',sysdate);
-insert into comments values(seq_comments.nextval, 48,'这个可小刀吗','zmy',sysdate);
+		select comid, comcid,comusername,comcontent,to_date(sysdate,'yyyy-MM-DD') from comments where comcid = 65
+
+		select comcid,comusername,to_char(comdate,'yyyy-MM-DD') from comments where comcid = 65;
+
+insert into comments values(seq_comments.nextval, 49,'这个可小刀吗','zmy', toString(sysdate,'yyyy-MM-DD'));
+insert into comments values(seq_comments.nextval, 65,'这个可小刀吗','zmy', to_date('19960203','yyyy-MM-dd'));
 insert into comments values(seq_comments.nextval, 46,'这个可小刀吗','zmy',sysdate);
 insert into comments values(seq_comments.nextval, 45,'这个可小刀吗','zmy',sysdate);
 

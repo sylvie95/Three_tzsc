@@ -13,13 +13,13 @@ public class Comments {
 	private String comcontent;			//发表的内容
 	private String comusername;			//发表留言评论的用户
 	private Date comdate = new Date();	//发表评论的时间
+	 
 	
 	public Comments() {
 	}
 
 	public Comments(int comcid, String comcontent, String comusername, Date comdate) {
-		super();
-		this.comcid = comcid;
+ 		this.comcid = comcid;
 		this.comcontent = comcontent;
 		this.comusername = comusername;
 		this.comdate = comdate;
